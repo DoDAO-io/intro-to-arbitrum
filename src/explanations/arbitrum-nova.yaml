@@ -88,3 +88,54 @@
     only stored securely but is also readily available for validation and use by
     the network, thus maintaining the continuity and efficiency of the Arbitrum
     protocol.
+- key: working-of-anytrust
+  shortTitle: working
+  details: >-
+    ## Sequencer-Committee Interaction
+
+    Here's the step-by-step process detailing the interaction between the
+    Arbitrum sequencer and the Data Availability Committee during block
+    validation in the Arbitrum AnyTrust protocol:
+
+
+    ### Step 1:Batch Creation
+
+    The Arbitrum sequencer generates a data batch for submission and sets an
+    expiration time, typically three weeks ahead. The sequencer sends this batch
+    data along with the expiration time to all Committee members simultaneously
+    via an RPC (Remote Procedure Call) interface.
+
+
+    ### Step 2: Data Storage by Committee Members
+
+    Each Committee member receives the batch and stores the data in its own
+    backing store, using the data’s hash as an index for future retrieval.
+    Committee members then sign the pair consisting of the data’s hash and the
+    expiration time using their individual BLS cryptographic keys.
+
+
+    ### Step 3: DACert Creation
+
+    The Committee members send their signatures back to the sequencer. Each
+    returns a signature accompanied by an indicator of successful storage. Once
+    the sequencer receives the required number of signatures, it aggregates them
+    to form a Data Availability Certificate (DACert) for the data batch.
+
+
+    ### Step 4: DACert Posting
+
+    The sequencer posts this DACert to the Layer 1 (L1) inbox contract. The
+    DACert is now available for the AnyTrust Layer 2 (L2) chain software, which
+    can validate the data's availability based on it. If the sequencer cannot
+    obtain the necessary signatures within a specified time frame, it defaults
+    to the traditional rollup method. It then posts the full data directly to
+    the L1 chain, bypassing the Committee. The L2 software is designed to
+    recognize both data formats—either provided through a DACert or posted in
+    full. It processes the data accordingly to continue the chain’s operation
+    seamlessly.
+
+
+    This process ensures that the AnyTrust protocol can validate blocks
+    efficiently while offering a contingency plan to maintain the chain's
+    integrity and continuity.
+  title: Working of Anytrust
