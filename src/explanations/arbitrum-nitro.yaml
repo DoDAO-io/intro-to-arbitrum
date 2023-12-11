@@ -1,0 +1,58 @@
+- key: nitro-vs-classic
+  title: Nitro vs Classic
+  shortTitle: Differences
+  details: >-
+
+    Here is the comparison between Arbitrum Nitro and Arbitrum Classic (original
+    version of Arbitrum):
+
+
+    | Feature                                  | Arbitrum
+    Classic                                              | Arbitrum
+    Nitro                                                  |
+
+    |------------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------|
+
+    | Goal                                     | Execution environment
+    resembling EVM as second layer to Ethereum | Execution environment
+    resembling EVM as second layer to Ethereum |
+
+    | Virtual Machine Used                     | Arbitrum Virtual Machine
+    (AVM)                                  | WebAssembly
+    (Wasm)                                              |
+
+    | Low-Level Instructions                   | Uses AVM for low-level
+    instructions                             | Compiles Go code to WASM for
+    low-level instructions             |
+
+    | Architecture                             | Relies on AVM for execution
+    environment                         | Direct usage of Geth's EVM
+    implementation, enhancing efficiency |
+
+    | Gas Fees and Ethereum Compatibility      | Higher fees compared to Nitro,
+    due to less optimized execution environment | Lower fees and better Ethereum
+    compatibility due to native execution of Go code |
+
+    | Codebase Simplicity                      | More complex due to custom AVM,
+    posing higher technical risks   | Simpler and more accessible codebase,
+    reducing technical risks  |
+
+    | Coding Languages                         | Solidity or
+    Vyper                                                | Go (a more common
+    language)                                     |
+
+    | Code Conversion                          | EVM bytecode converted to AVM
+    bytecode                           | Uses Wasm only when there's a
+    dispute                           |
+
+    | Transaction Management and Fraud Proofs  | AVM bytecode runs transactions
+    and generates fraud proofs        | Checkpoints summarize transactions; Wasm
+    used for disputes      |
+
+    | Dispute Resolution                       | Validators inspect AVM bytecode
+    in case of disputes              | Validators agree on block before
+    examining Wasm details         |
+
+    | Efficiency and Resource Management       | Less efficient, prepares for
+    problems even if they do not occur  | More efficient, converts to Wasm only
+    during disputes, saving time and resources |
