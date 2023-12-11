@@ -139,3 +139,44 @@
     efficiently while offering a contingency plan to maintain the chain's
     integrity and continuity.
   title: Working of Anytrust
+- key: difference-between-anytrust-and-rollup
+  shortTitle: Nova vs One
+  details: >
+    ## Differences between Arbitrum Nova (AnyTrust) and Arbitrum One (Rollup)
+
+    Arbitrum One and Arbitrum nova are based on different block authentication
+    mechanisms which results in different use face, operations and cost. Some of
+    the major differences between two chains are listed in the table below.
+
+
+
+    | Feature               | Arbitrum One
+    (Rollup)                                                        | Arbitrum
+    Nova (AnyTrust)                                               |
+
+    |-----------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------|
+
+    | **Data Authenticity** | Layer 2 transaction data is posted on the Ethereum
+    blockchain.               | Uses AnyTrust technology with a Data
+    Availability Committee (DAC).     |
+
+    | **Trust Assumption**  | Trustless and permissionless, open for anyone to
+    validate.                   | Relies on at least two honest DAC members to
+    operate securely.         |
+
+    | **Gas Price**         | Minimum gas price is 0.1
+    gwei.                                               | Minimum gas price is
+    0.01 gwei, potentially 10x cheaper.               |
+
+    | **Scalability**       | Suitable for general use
+    cases.                                              | More scalable,
+    designed for high-load dApps like NFTs and social networks. |
+
+    | **DeFi Protocols**    | Higher TVL with major DeFi protocols like Uniswap,
+    Aave, and Curve.          | Lower TVL with a focus on gaming and social,
+    includes Sushi and others.   |
+
+    | **Transaction Costs** | Relatively higher due to full data posting on
+    Ethereum.                      | Lower costs due to only posting
+    certificates on Layer 1.               |
+  title: Difference between Anytrust and Rollup
