@@ -397,6 +397,11 @@ topics:
       binary format, known for speed, portability, and security. 
 
 
+      <div align="center">
+        <img style="max-height:500px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_stylus_arbitrum_university_536/1701186611147_stylus.png"/>
+      </div>
+
+
       Stylus represents an upgrade to Arbitrum Nitro, a technology stack that
       powers various Arbitrum chains, and is part of the EVM+ paradigm,
       maintaining full interoperability with existing Solidity contracts. The
@@ -423,6 +428,11 @@ topics:
       EVM with improved efficiency and a rich set of libraries from languages
       like Rust, C, and C++, elevating the standard for smart contract
       development without altering EVM's core functionality.
+
+
+      <div align="center">
+        <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_stylus_arbitrum_university_536/1701188225600_importance_stylus.png"/>
+      </div>
 
 
       **3. Cost-Effective Advanced Cryptography:** Stylus enables previously
