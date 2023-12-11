@@ -181,6 +181,7 @@
     incentives with the integrity and efficient progression of the Arbitrum
     chain.
 - key: dispute-resolution
+  title: Dispute Resolution
   shortTitle: Resolve dispute
   details: >-
     ## Dispute Resolution
@@ -206,6 +207,11 @@
     each iteration focusing on an increasingly smaller portion of the execution
     steps. This iterative process is repeated until the dispute is narrowed down
     to a disagreement about a single step of execution.
+
+
+    <div align="center">
+      <img style="max-height:800px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_one_arbitrum_university_177/1701169120365_dispute.png"/>
+    </div>
 
 
     ### Step 3: L1 Contract's Role
@@ -255,4 +261,3 @@
        There is at least one staker, and
 
        No staker is staked on the RBlock.
-  title: Dispute Resolution
