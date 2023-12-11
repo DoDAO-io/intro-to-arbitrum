@@ -31,6 +31,11 @@
     finalizing transactions.
 
 
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_arbitrum_arbitrum_university_794/1700677076473_types_of%20rollups.png"/>
+    </div>
+
+
     #### Zero-Knowledge Rollups (ZK-Rollups)
 
     ZK-Rollups bundle transactions and generate a cryptographic proof, known as
@@ -87,6 +92,11 @@
     verifiable record of the rollup's state changes on the Layer 1 blockchain.
     This mechanism ensures that the state of the rollup can be trusted and
     verified.
+
+
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_arbitrum_arbitrum_university_794/1700677113051_working_of%20rollup.png"/>
+    </div>
 
 
     #### Step 4: Fraud Proof 
