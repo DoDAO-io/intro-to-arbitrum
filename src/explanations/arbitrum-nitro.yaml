@@ -57,6 +57,7 @@
     problems even if they do not occur  | More efficient, converts to Wasm only
     during disputes, saving time and resources |
 - key: arbitrum-nitro-design
+  title: 'Arbitrum Nitro Design '
   shortTitle: Architecture
   details: >-
     ## How Transactions Work?
@@ -66,6 +67,11 @@
     emerges as an evidence to innovation in the Ethereum ecosystem. The
     transaction pocess in Arbitrum Nitro technology consists of the following
     cricial steps:
+
+
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677469815_transaction_lifecycle.png"/>
+    </div>
 
 
     #### Step 1: Sequencing and Deterministic Execution
@@ -138,6 +144,11 @@
     sandwich," with geth as the bread and ArbOS as the filling.
 
 
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677506703_layers.png"/>
+    </div>
+
+
     ### Dual Compilation Strategy
 
 
@@ -150,4 +161,3 @@
     When a dispute occurs, the verification of the STF's results is conducted
     with reference to the WAVM code, ensuring that the same logic governs both
     normal operation and the verification process during disputes.
-  title: 'Arbitrum Nitro Design '
