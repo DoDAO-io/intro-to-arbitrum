@@ -370,6 +370,7 @@ topics:
       **5. Full Interoperability:** Solidity and WASM programs can work together
       smoothly. Developers can mix languages, using Solidity to run Rust code,
       or vice versa, without any extra setup.
+    explanations: arbitrum-stylus.yaml
 courseAdmins:
   - '0x34d014758297c00fea49935fce172677904d51ef'
   - '0x2a6af0619be90d129ab0d70c10e25c097b6ec67d'
