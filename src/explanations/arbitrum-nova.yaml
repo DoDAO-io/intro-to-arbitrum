@@ -94,6 +94,7 @@
     the network, thus maintaining the continuity and efficiency of the Arbitrum
     protocol.
 - key: working-of-anytrust
+  title: Working of Anytrust
   shortTitle: working
   details: >-
     ## Sequencer-Committee Interaction
@@ -117,6 +118,11 @@
     backing store, using the data’s hash as an index for future retrieval.
     Committee members then sign the pair consisting of the data’s hash and the
     expiration time using their individual BLS cryptographic keys.
+
+
+    <div align="center">
+      <img style="max-height:700px;margin-bottom:50px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nova_arbitrum_university_144/1701175567955_kaam_of%20anytrust.png"/>
+    </div>
 
 
     ### Step 3: DACert Creation
@@ -143,7 +149,6 @@
     This process ensures that the AnyTrust protocol can validate blocks
     efficiently while offering a contingency plan to maintain the chain's
     integrity and continuity.
-  title: Working of Anytrust
 - key: difference-between-anytrust-and-rollup
   shortTitle: Nova vs One
   details: >
