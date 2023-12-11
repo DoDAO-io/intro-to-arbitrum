@@ -7,8 +7,7 @@ highlights:
 publishStatus: Draft
 thumbnail: >-
   https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/CourseIcons/audit_and_monitoring.png
-details: >-
-    ## Coming Soon
+details: '## Coming Soon'
 duration: 30 mins - 1 hour
 topics:
   - key: introduction
@@ -23,6 +22,9 @@ topics:
       reliable, and that it will function as intended when deployed on a
       blockchain network.
 
+  - key: arbitrum-nitro
+    title: Arbitrum Nitro
+    details: write it doenjkjsdj;ao;isfjsdeo'fk'pfl;dlv,.
 courseAdmins:
   - '0x34d014758297c00fea49935fce172677904d51ef'
   - '0x2a6af0619be90d129ab0d70c10e25c097b6ec67d'
