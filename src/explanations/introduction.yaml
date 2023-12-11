@@ -126,6 +126,7 @@
     with the capability to penalize malicious actors, thereby maintaining the
     integrity of the rollup.  
 - key: arbitrum-chains
+  title: Arbitrum Chains
   shortTitle: Types of Chains
   details: >-
     Arbitrum ecosystem consists of various chains with distinct features that
@@ -153,6 +154,11 @@
     ensures the speedy and efficient handling of Level 2 transaction data before
     it is finalized on Ethereum's main chain. Arbitrum Nova is tailored for
     applications where high throughput and affordability are prioritized.
+
+
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_arbitrum_arbitrum_university_794/1700677166386_chains.png"/>
+    </div>
 
 
     ### Arbitrum Orbit
@@ -183,6 +189,11 @@
     decreased reliance on Layer 1 computations.
 
 
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_arbitrum_arbitrum_university_794/1700677202817_difference.png"/>
+    </div>
+
+
     ### Virtual Machine Compatibility
 
     The Arbitrum Virtual Machine (AVM) is more closely optimized for EVM coding
@@ -197,7 +208,6 @@
     Due to the multi-round fraud proof mechanism, transaction finality on
     Arbitrum can be slower compared to some other rollups, but this trade-off
     allows for lower fees because of reduced Layer 1 computation reliance​.
-  title: Arbitrum Chains
 - key: arbitrum-ecosystem
   shortTitle: Arbitrum Community
   details: >-
