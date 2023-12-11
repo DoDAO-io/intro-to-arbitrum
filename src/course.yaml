@@ -124,6 +124,11 @@ topics:
       the future of Ethereum. 
 
 
+      <div align="center">
+        <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677384029_nitro.png"/>
+      </div>
+
+
       It introduces advanced calldata compression, reducing transaction costs
       even further. Nitro enhances the performance of Layer 1 (L1) nodes, aligns
       EVM operation pricing with Ethereum, and introduces additional
@@ -144,6 +149,11 @@ topics:
       processed per second. Despite being a separate blockchain, Arbitrum Nitro
       maintains the security and privacy features of Ethereum's Layer 1 (L1) and
       relays all transaction information to the main Ethereum chain.
+
+
+      <div align="center">
+        <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677415896_features.png"/>
+      </div>
 
 
       #### EVM Compatiblility
