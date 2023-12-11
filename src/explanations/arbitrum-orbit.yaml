@@ -1,0 +1,82 @@
+- key: owning-the-orbit-chain
+  title: Owning the Orbit Chain
+  shortTitle: Orbit Ownership
+  details: >-
+    ## Orbit Licensing 
+
+    The licensing for Arbitrum Orbit chains is designed to provide both security
+    and flexibility for developers using the Arbitrum Nitro codebase. When you
+    create an Orbit chain, you receive a license that is both perpetual, meaning
+    it cannot be revoked, and recursive, allowing your Orbit chain to host
+    further chains under the same licensing terms. This ensures that once you've
+    developed your Orbit chain, you retain unfettered and ongoing access to the
+    software, and you can extend these rights to additional chains created
+    within your Orbit chain's ecosystem.
+
+
+    However, this license applies specifically to chains that settle to an
+    Arbitrum-DAO-governed chain. If you wish to establish an independent Layer 2
+    chain on Ethereum that does not settle to an Arbitrum-DAO chain, you must
+    obtain a separate license. For this, you have two avenues:
+
+
+    **1. Offchain Labs**: You can directly request a custom license from
+    Offchain Labs, the original developers of the Arbitrum Nitro codebase and
+    the primary licensor.
+
+
+    **2. Arbitrum DAO Proposal**: Alternatively, you can submit a proposal to
+    the Arbitrum DAO, which has been granted co-licensor rights. The DAO will
+    then make a democratic decision on whether to grant a license for your new
+    L2 chain.
+
+
+    ## How to customize your Orbit chain's deployment configuration?
+
+    To customize your Orbit chain's configuration, follow these steps when you
+    access the Orbit chain deployment portal:
+
+
+    ### Step1: Access the Deployment Portal
+
+    Navigate to the Orbit chain deployment portal where you'll launch your new
+    Orbit chain. You will encounter a form with various configuration fields.
+    This form typically comes with default values that are suitable for many
+    cases but can be customized.
+
+
+    ### Step 2: Update Information
+
+    For devnets, the Chain ID is automatically assigned and isn't crucial. In
+    production, you'll choose a unique integer identifier that hasn’t been used
+    on chain indexes like Chainlist.org. Enter a distinctive name for your Orbit
+    chain that is easily recognizable to your users and developers.
+
+
+    ### Step 3: Customise Specifications
+
+    Decide on the Challenge period in blocks, balancing the time validators have
+    to dispute states against the withdrawal delay for users. This is measured
+    in blocks of the underlying L1 chain. Specify the token for validators to
+    use as a stake, using the token's contract address on the L2 chain to which
+    your Orbit chain settles, or use the address for ETH if that's the chosen
+    stake token. Set the Base stake amount, considering that a lower stake
+    lowers the barrier to entry but may increase vulnerability to attacks, while
+    a higher stake deters attacks but raises the barrier to validator
+    participation.
+
+
+    ### Step 4: Owner
+
+    Provide the account address that will own and manage the Orbit chain's base
+    contracts. In a production environment, this address might be governed by a
+    DAO or a multisig, but for a devnet, it can be a standard Ethereum wallet
+    address. Carefully review the default values and modify them based on the
+    needs and security considerations of your project. Once you've finalized the
+    configuration values, proceed with the deployment, ensuring that the Owner
+    address has sufficient ETH to cover gas costs for contract deployment on L2.
+
+
+    By customizing these settings, you can tailor your Orbit chain to the
+    specific requirements of your application, balancing security,
+    participation, and administrative control according to your project's needs.
