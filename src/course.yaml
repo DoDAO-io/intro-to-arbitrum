@@ -1,0 +1,32 @@
+title: DoDAO Course Template
+key: dodao-course-template
+summary: |
+  This is a course template
+highlights:
+  - Introduction
+publishStatus: Draft
+thumbnail: >-
+  https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/CourseIcons/audit_and_monitoring.png
+details: >-
+    ## Coming Soon
+duration: 30 mins - 1 hour
+topics:
+  - key: introduction
+    title: Introduction
+    details: >+
+      Smart contract auditing is the process of reviewing and testing the source
+      code of a smart contract to identify any potential vulnerabilities or
+      security issues. This can include checking for errors in the code,
+      evaluating the contract's overall design and architecture, and testing the
+      contract's functionality to ensure that it performs as intended. The goal
+      of a smart contract audit is to ensure that the contract is secure and
+      reliable, and that it will function as intended when deployed on a
+      blockchain network.
+
+courseAdmins:
+  - '0x34d014758297c00fea49935fce172677904d51ef'
+  - '0x2a6af0619be90d129ab0d70c10e25c097b6ec67d'
+coursePassContent: Pass content of Course !!!!!!!!!!
+topicConfig:
+  showExplanations: true
+  showHints: true
