@@ -69,11 +69,6 @@
     cricial steps:
 
 
-    <div align="center">
-      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677469815_transaction_lifecycle.png"/>
-    </div>
-
-
     #### Step 1: Sequencing and Deterministic Execution
 
 
@@ -86,6 +81,11 @@
     for hard finality. The latter involves compressing transactions using
     "brotli" and posting them to Ethereum, where their finalization ensures the
     sequence's immutability on Nitro.
+
+
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677469815_transaction_lifecycle.png"/>
+    </div>
 
 
     #### Step 2: State Transition Function
