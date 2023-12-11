@@ -86,6 +86,7 @@
     Validators may stake ETH as a bond for proposing RBlocks. If they propose a
     wrong RBlock, they will lose their stake, incentivizing honest behavior.
 - key: roll-up-security
+  title: Roll up Security
   shortTitle: Fraud Proof
   details: >-
     ## The Roll up security
@@ -98,6 +99,11 @@
     preserved. Moreover, the interactive dispute resolution process allows any
     honest participant to challenge incorrect claims by staking, thereby
     maintaining the overall security and reliability of the network. 
+
+
+    <div align="center">
+      <img style="max-height:300px;margin-bottom:20px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_one_arbitrum_university_177/1701107044878_validator_network.png"/>
+    </div>
 
 
     ### Validators
@@ -144,6 +150,11 @@
     request a refund of their stake.
 
 
+    <div align="center">
+      <img style="max-height:800px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_one_arbitrum_university_177/1701169197131_stakes.png"/>
+    </div>
+
+
     ### Step 3: Creating New RBlocks
 
     To propose a new RBlock, a validator must be a staker and have an active
@@ -169,7 +180,6 @@
     This staking mechanism is designed to align the validators' financial
     incentives with the integrity and efficient progression of the Arbitrum
     chain.
-  title: Roll up Security
 - key: dispute-resolution
   shortTitle: Resolve dispute
   details: >-
