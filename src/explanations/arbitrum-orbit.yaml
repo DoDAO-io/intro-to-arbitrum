@@ -91,6 +91,7 @@
     specific requirements of your application, balancing security,
     participation, and administrative control according to your project's needs.
 - key: how-to-launch-an-orbit-chain
+  title: How to launch an Orbit Chain?
   shortTitle: Launching Chain
   details: >-
     ## Steps to launch an Orbit Chain
@@ -148,6 +149,11 @@
     private key is also auto-generated and stored in a JSON configuration file.
     After configuring this address, you proceed to the next deployment phase of
     your Orbit chain.
+
+
+    <div align="center">
+      <img style="max-height:700px;margin-bottom:50px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_orbit_arbitrum_university_525/1701183863381_launching.png"/>
+    </div>
 
 
     ### Step 4: Deploye Orbit Chain
@@ -230,7 +236,6 @@
     `PRIVATE_KEY="0xYourPrivateKey"
     L2_RPC_URL="https://sepolia-rollup.arbitrum.io/rpc"
     L3_RPC_URL="http://localhost:8449" yarn run setup`.
-  title: How to launch an Orbit Chain?
 - key: how-to-customise-orbit-chains-behaviour
   shortTitle: Customization
   details: >
