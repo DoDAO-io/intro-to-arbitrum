@@ -165,3 +165,79 @@
     incentives with the integrity and efficient progression of the Arbitrum
     chain.
   title: Roll up Security
+- key: dispute-resolution
+  shortTitle: Resolve dispute
+  details: >-
+    ## Dispute Resolution
+
+    The dispute resolution process in Arbitrum, which utilizes interactive
+    proving, unfolds as follows:
+
+
+    ### Step 1: Initiation of Dispute
+
+    The claiment makes a claim about the result of the chain's computation. The
+    other person challenges their claim, disagreeing with the result they
+    propose. Both parties engage in a back-and-forth communication, overseen by
+    an L1 contract, aiming to resolve their dispute.
+
+
+    ### Step 2: Dissection of Dispute
+
+    The claiment split their original claim, which covers N execution steps,
+    into two separate claims, each representing N/2 steps. Other party then
+    selects one of these N/2-step claims to contest, effectively reducing the
+    dispute's scope by half. The process of halving the dispute continues, with
+    each iteration focusing on an increasingly smaller portion of the execution
+    steps. This iterative process is repeated until the dispute is narrowed down
+    to a disagreement about a single step of execution.
+
+
+    ### Step 3: L1 Contract's Role
+
+    During the iterative halving process, the L1 contract does not evaluate the
+    merits of the execution; it only ensures that the protocol's rules are
+    followed. Only when the dispute is about a single step does the L1 contract
+    evaluate the execution to determine the correctness of the claim.
+
+
+    ### Step 4: Resolution
+
+    Both parties are encouraged to perform as much of the dispute resolution
+    work off-chain as possible, minimizing the load on the L1 contract. Once the
+    dispute is reduced to a single step, the L1 contract examines the specific
+    instruction in question to resolve the dispute, determining whether
+    claiment's claim is correct.
+
+
+    ## Rules to confirm or reject
+
+    The first unresolved RBlock can be confirmed if:
+
+
+    - The RBlock's predecessor is the latest confirmed RBlock, and
+
+
+    - The RBlock's deadline has passed, and
+
+
+    - There is at least one staker, and
+
+
+    - All stakers are staked on the RBlock.
+
+
+    The first unresolved RBlock can be rejected if:
+
+
+    - The RBlock's predecessor has been rejected, or
+
+
+    - All of the following are true:
+
+       The RBlock's deadline has passed, and
+
+       There is at least one staker, and
+
+       No staker is staked on the RBlock.
+  title: Dispute Resolution
