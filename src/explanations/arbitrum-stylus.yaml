@@ -27,6 +27,11 @@
     and efficient for execution.
 
 
+    <div align="center">
+      <img style="max-height:500px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_stylus_arbitrum_university_536/1701189449845_working_of%20stylus.png"/>
+    </div>
+
+
     ### Step 3: Execution
 
     Stylus programs run on a modified version of Wasmer, a leading WebAssembly
