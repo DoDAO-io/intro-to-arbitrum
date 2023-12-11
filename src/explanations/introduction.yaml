@@ -1,0 +1,117 @@
+- key: arbiturm-optimistic-rollup
+  title: Arbiturm - Optimistic Rollup
+  shortTitle: Optimistic Rollup
+  details: >-
+    ## Roll Ups
+
+    Rollups are a type of Layer 2 scaling solution that execute transactions
+    outside the main Ethereum chain (off-chain) but record transaction data on
+    the main chain (on-chain). The core idea is to "roll up" or batch many
+    transactions into a single one, which is then posted to the main chain. This
+    reduces the amount of data that needs to be stored and processed on the main
+    chain, significantly increasing throughput and reducing transaction fees.
+
+
+    ### Types of Roll ups
+
+    There are two main types of rollups, each with its own approach to
+    validating the batched transactions:
+
+
+    #### Optimistic Rollups
+
+    These operate on the principle that all transactions are assumed to be valid
+    by default. They only execute transaction computations on-chain in the event
+    of a challenge. This means that instead of performing computation to prove
+    the correctness of transactions upfront, Optimistic Rollups post the
+    transactions along with a bond. After a challenge period, if no one disputes
+    the transaction batch with a "fraud proof" showing that something was wrong,
+    the transactions are considered valid. This method allows for significant
+    scaling benefits, but the challenge period can introduce a delay in
+    finalizing transactions.
+
+
+    #### Zero-Knowledge Rollups (ZK-Rollups)
+
+    ZK-Rollups bundle transactions and generate a cryptographic proof, known as
+    a zero-knowledge proof (specifically, a zk-SNARK or zk-STARK), attesting to
+    their validity. This proof is then posted to the main chain, where it can be
+    quickly verified. Because the validity of the entire batch can be confirmed
+    without executing the transactions individually, ZK-Rollups can finalize
+    transactions much more quickly than Optimistic Rollups. Additionally,
+    ZK-Rollups enhance privacy since the actual transaction data can be kept
+    off-chain.
+
+
+    ## Optimistic Rollup; How it works?
+
+    Optimistic Rollups operates on the assumption that all transactions are
+    honest and valid unless proven otherwise. Here's how they work:
+
+
+    #### Step 1: Execution and Aggregation
+
+    In optimistic rollups, operators, or validators, process transactions by
+    aggregating and compressing them before submitting them to Ethereum's
+    blockchain. Any user can act as a validator by providing a bond, similar to
+    proof-of-stake systems, and risks penalties for any invalid submissions.
+    Validators also maintain their version of the rollup's state and can issue
+    fraud proofs if discrepancies arise. Some rollups use a 'sequencer' instead
+    of multiple validators, which centralizes transaction processing and
+    submission but provides greater control over transaction order and immediate
+    access to the rollup chain.
+
+
+    #### Step 2: Sending Roll up Blocks to Ethereum
+
+    Operators consolidate multiple off-chain transactions into a single batch
+    and compress the transaction data to minimize storage costs on Ethereum.
+    This batch is then submitted to Ethereum as 'calldata' — a temporary and
+    immutable form of data used by smart contracts to execute functions. While
+    'calldata' remains in the blockchain's history, it does not become part of
+    the Ethereum state, thereby conserving space and reducing costs. The
+    'calldata' keyword in Solidity is instrumental in calling smart contract
+    functions and organizing inputs, playing a critical role in the efficient
+    operation of optimistic rollups. 
+
+
+    #### Step 3: State Commitments
+
+    State commitments play a crucial role in maintaining the integrity of the
+    system. The state is structured as a Merkle tree, also known as the state
+    tree, which contains all the information about the current state of the
+    rollup. Operators compute new state roots reflecting the latest state
+    changes and submit these roots to the rollup contract on Ethereum. By
+    committing to the old and new state roots when posting transaction batches,
+    and including the Merkle root for transactions, operators provide a
+    verifiable record of the rollup's state changes on the Layer 1 blockchain.
+    This mechanism ensures that the state of the rollup can be trusted and
+    verified.
+
+
+    #### Step 4: Fraud Proof 
+
+    The essence of optimistic rollups lies in their fraud-proof mechanism. They
+    allow blocks to be published without immediate validity checks. If
+    discrepancies are suspected, users can challenge transitions within a set
+    timeframe. Challenges trigger fraud-proof calculations, where disputed
+    transactions are replayed on Ethereum's main network through a verifier
+    contract. If fraud is confirmed, the responsible validator is penalized. To
+    support this, rollups must make detailed state commitments and transaction
+    data public on-chain, which incurs gas fees. Multi-round interactive proofs
+    can enhance this process's efficiency by reducing the data and computation
+    required for each verification step.
+
+
+    #### Step 5: Multiround Interactive Proving
+
+    Multi-round interactive proving is a critical component of optimistic
+    rollups. It involves a dialogue between a challenger and the block's
+    producer (asserter/operator), overseen by a Layer 1 verifier contract. If a
+    block is challenged, the operator splits the disputed assertion for the
+    rollup block into two, with each part undergoing repeated division through a
+    bisection protocol until the specific point of contention is isolated. The
+    verifier contract then adjudicates the dispute and identifies any fraudulent
+    activity. This process ensures that only valid transactions are finalized,
+    with the capability to penalize malicious actors, thereby maintaining the
+    integrity of the rollup.  
