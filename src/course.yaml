@@ -328,6 +328,11 @@ topics:
       Ethereum's security features.
 
 
+      <div align="center">
+        <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_orbit_arbitrum_university_525/1701177231413_orbit.png"/>
+      </div>
+
+
       ## Benefits of Orbit
 
       Arbitrum Orbit addresses several key challenges within the Ethereum
@@ -353,6 +358,11 @@ topics:
       execution environments. While maintaining full EVM compatibility, Orbit
       chains can also limit smart contract functionalities to better serve
       specific project requirements, leading to optimized performance.
+
+
+      <div align="center">
+        <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_orbit_arbitrum_university_525/1701177276212_benefits_of%20orbit.png"/>
+      </div>
 
 
       **4. Flexible Governance**: Developers have the autonomy to establish
