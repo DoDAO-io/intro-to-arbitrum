@@ -246,6 +246,7 @@ topics:
       flexible operation of the Committee, allowing for easy updates to
       membership and keys. This ensures data availability and supports a
       trust-minimized, efficient blockchain ecosystem.
+    explanations: arbitrum-nova.yaml
   - key: arbitrum-orbit
     title: Arbitrum Orbit
     details: saldhaiadjiokwfml,elfe
