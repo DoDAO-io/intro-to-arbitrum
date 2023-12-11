@@ -221,3 +221,340 @@
     L2_RPC_URL="https://sepolia-rollup.arbitrum.io/rpc"
     L3_RPC_URL="http://localhost:8449" yarn run setup`.
   title: How to launch an Orbit Chain?
+- key: how-to-customise-orbit-chains-behaviour
+  shortTitle: Customization
+  details: >
+    ## How to Customise Orbit Chain's Behaviour 
+
+    Modifying your Orbit chain's State Transition Function (STF), responsible
+    for block generation, requires updating the fraud proof system for changes
+    like new EVM opcodes or gas rules to be recognized. Simple updates, like
+    adding RPC methods or altering transaction order, don't impact consensus and
+    don't need these adjustments. To be compatible with Arbitrum Nitro, STF
+    changes must ensure determinism, preserve historical block integrity, avoid
+    external dependencies, confine state changes to Ethereum's state trie,
+    maintain quick processing for node synchronization, and consistently produce
+    blocks without errors.
+
+    If you're looking to alter the State Transition Function, it's necessary to
+    create a custom version of the Arbitrum Nitro node Docker image. The
+    behaviour of an orbit chain can be customised by following the steps given
+    below:
+
+
+    ### Step 1: Download Nitro Source Code
+
+    Start by duplicating the Nitro repository:
+
+
+    `git clone --branch v2.1.1 https://github.com/OffchainLabs/nitro.git
+
+    cd nitro
+
+    git submodule update --init --recursive --force
+
+    `
+
+
+    Proceed to apply your modifications to the State Transition Function.
+
+
+    ### Step 2: Run Node Without Fraud Proof
+
+    For building the custom Arbitrum Nitro node Docker image, ensure Docker is
+    installed by checking with docker version in the terminal. If it's not
+    installed, refer to Docker's official guide or install it using your Linux
+    distribution's package manager and enable the Docker service. With Docker
+    ready, navigate to the Nitro directory and build your custom node using the
+    command `docker build . --tag custom-nitro-node`. After constructing your
+    Nitro node image, edit your node's `nodeConfig.json` file, typically in the
+    `config` directory, to include the
+    `--node.staker.dangerous.without-block-validator` parameter under the staker
+    configuration to bypass fraud proof checks.
+
+    Here's an example snippet for the nodeConfig.json:
+
+    `...
+
+    "staker": {
+      ...
+      "dangerous": {
+        "without-block-validator": true
+      }
+      ...
+    },
+
+    ...
+
+    `
+
+    You can launch your node in two ways:
+
+
+    1. Via docker-compose: Update the docker-compose.yml file to use
+    custom-nitro-node for the Nitro service, then execute docker compose up to
+    start all services.
+
+    `...
+
+    nitro:
+      image: custom-nitro-node
+      ports:
+    ...
+
+    `
+
+    2. Directly with docker run: To run just the Nitro node, use:
+
+    `docker run --rm -it -v /path/to/your/node/dir:/home/user/.arbitrum -p
+    0.0.0.0:8449:8449 custom-nitro-node --conf.file
+    /home/user/.arbitrum/nodeConfig.json`
+
+
+    ### Step 3: Enable Fraud Proof
+
+    To enable fraud proofs, you'll need to build the "replay binary", which
+    defines the State Transition Function for the fraud prover. The replay
+    binary (sometimes called the machine) re-executes the State Transition
+    Function against input messages to determine the correct output block. It
+    has three forms:
+
+
+    The replay.wasm binary is the Go replay binary compiled to WASM. It's used
+    by the JIT validator to verify blocks against the fraud prover.
+
+    The machine.wavm.br binary is a compressed binary containing the Go replay
+    binary and all its dependencies, compiled to WASM, then translated to the
+    Arbitrum fraud proving variant WAVM. It's used by Arbitrator when actually
+    entering a challenge and performing the fraud proofs, and has identical
+    behavior to replay.wasm.
+
+    The WASM module root (stored in module-root.txt) is a 32 byte hash usually
+    expressed in hexadecimal which is a merkelization of machine.wavm.br. The
+    replay binary is much too large to post on-chain, so this hash is set in the
+    L1 rollup contract to determine the correct replay binary during fraud
+    proofs.
+
+    To run a validator node with fraud proofs enabled, the validator node's
+    Docker image will need to contain all three of these versions of the replay
+    binary.
+
+
+    #### Build a dev image
+
+    The simplest way to build a Docker image with the new replay binary is to
+    build a dev image. These images contain a freshly built replay binary, but
+    note that the replay binary and corresponding WASM module root will
+    generally change when the code is updated, even if the State Transition
+    Function has equivalent behavior. It's important that the validator's WASM
+    module root matches the on-chain WASM module root, which is why this
+    approach is harder to maintain. Over the longer term, you'll want to
+    maintain a separate build of the replay binary that matches the one
+    currently on-chain, usable by any node image.
+
+
+    To build the dev node image and get the WASM module root, run:
+
+
+    `docker build . --target nitro-node-dev --tag custom-nitro-node-dev
+
+    docker run --rm --entrypoint cat custom-nitro-node-dev
+    target/machines/latest/module-root.txt`
+
+
+    Once you have the WASM module root, you can put it on-chain by calling
+    `setWasmModuleRoot(newWasmModuleRoot)` on the rollup contract as the owner.
+    The rollup contract address can be found in the chain deployment info JSON.
+    You can confirm that the WASM module root was updated by calling
+    `wasmModuleRoot()` on the rollup contract.
+
+
+    Once you have set the new WASM module root on-chain, you can re-enable fraud
+    proofs and run your node.
+
+
+    To re-enable fraud proofs, open your `nodeConfig.json` file again, and
+    remove the "dangerous" section (containing the `without-block-validator`
+    property) that you previously added.
+
+
+    After that, you'll have, again, two ways of running your node.
+
+
+    1. Using the docker-compose file
+
+
+    As mentioned before, this is the recommended way if you're running your
+    Orbit chain locally through the provided docker-compose file. In
+    `docker-compose.yml`, modify the Docker image used for the Nitro container.
+    Notice that we'll now use the `custom-nitro-node-dev` you just created:
+
+
+    `...
+
+    nitro:
+      image: custom-nitro-node-dev
+      ports:
+    ...`
+
+
+    And run docker compose up to run all of your containers.
+
+
+    2. Use docker run to run your Nitro node only
+
+
+    This method will only run the customized Nitro node (i.e., it will not run
+    Blockscout, or the DA server if you're using an AnyTrust chain). Use the
+    following command:
+
+
+    `docker run --rm -it -v /path/to/your/node/dir:/home/user/.arbitrum -p
+    0.0.0.0:8449:8449 custom-nitro-node-dev --conf.file
+    /home/user/.arbitrum/nodeConfig.json`
+
+
+
+    ####  Preserving the replay binary
+
+    The primary issue with simply using a nitro-node-dev build is that, whenever
+    the code changes at all, the replay binary will also change.
+
+
+    If the node is missing the replay binary corresponding to the on-chain WASM
+    module root, it will be unable to act as a validator. Therefore, when
+    releasing new node Docker images it's important to include the currently
+    on-chain WASM module root.
+
+
+    To do that, you'll need to first extract the replay binary from the
+    nitro-node-dev Docker image built earlier:
+
+
+    `docker run --rm --name replay-binary-extractor --entrypoint sleep
+    custom-nitro-node-dev infinity
+
+    docker cp replay-binary-extractor:/home/user/target/machines/latest
+    extracted-replay-binary
+
+    docker stop replay-binary-extractor
+
+    cat extracted-replay-binary/module.root
+
+    mv extracted-replay-binary "target/machines/$(cat
+    extracted-replay-binary/module.root)"`
+
+
+    These commands will output the new WASM module root, and create the
+    directory `target/machines/<wasm module root>.` There you'll find the three
+    versions of the replay binary mentioned earlier: `replay.wasm`,
+    `machine.wavm.br`, and `module-root.txt`, along with some other optional
+    files. Now that you've extracted the replay binary, there are two ways to
+    add it to future Docker images, including non-dev image builds. You can
+    either keep it locally and copy it in, or host it on the web.
+
+
+    Option 1: Store the extracted replay binary locally
+
+    Now that we've extracted the replay binary, we can modify the `Dockerfile`
+    to copy it into new Docker builds. Edit the Dockerfile file in the root of
+    the nitro folder, and after all the `RUN ./download-machines.sh ...` lines,
+    add:
+
+
+    `COPY target/machines/<wasm module root> <wasm module root>
+
+    RUN ln -sfT <wasm module root> latest`
+
+
+    Replace each `<wasm module root>` with the WASM module root you got earlier.
+
+
+    Option 2: Host the replay binary on the web
+
+    To support building the Docker image on other computers without this local
+    machine directory, you'll need to either commit the machine to git, or
+    preferably, host the replay binary on the web.
+
+
+    To host the replay binary on the web, you'll need to host the `replay.wasm`
+    and `machine.wavm.br` files somewhere. One good option is GitHub releases,
+    but any hosting service works.
+
+
+    Once you have those two files hosted, instead of the `COPY` and `RUN`
+    command mentioned in option 1, you'll need to add these new lines to the
+    Dockerfile file in the root of the nitro folder, after all the `RUN
+    ./download-machines.sh ...` lines:
+
+
+    `RUN wasm_module_root="<wasm module root>" && \
+        mkdir "$wasm_module_root" && \
+        wget <url of replay.wasm> -O "$wasm_module_root/replay.wasm" && \
+        wget <url of machine.wavm.br> -O "$wasm_module_root/machine.wavm.br" && \
+        echo "$wasm_module_root" > "$wasm_module_root/module-root.txt" && \
+        ln -sfT "$wasm_module_root" latest`
+
+    Replace the `<wasm module root>` with the WASM module root you got earlier,
+    the `<url of replay.wasm>` with the direct link to the `replay.wasm` file
+    (it must be a direct link to the file and not just a download site), and the
+    `<url of machine.wavm.br>` with the direct link to the `machine.wavm.br`
+    file.
+
+
+    ### Step 4: Verify Fraud Proofs
+
+    With your Docker images ready, test your blockchain by making transactions
+    and monitoring for "validation succeeded" in the logs, indicating the State
+    Transition Function is working. If you encounter "Error during validation,"
+    check that your replay binary is updated with your latest changes and the
+    WASM module root in the rollup contract is correctly set to match your
+    binary.
+
+
+    ## Chain Parameters
+
+    Chain parameters define the essential rules and configurations for a
+    blockchain network, such as block size, block time, consensus rules, and
+    network IDs, ensuring that all nodes on the network are in sync and follow
+    the same protocol for validating and adding transactions. They are critical
+    for maintaining the blockchain's integrity and security.
+
+
+    | Param                |
+    Description                                                                                              
+    | Arbitrum One               | Nova                      | Arb
+    Goerli                | Arb Sepolia               |
+
+    |----------------------|-----------------------------------------------------------------------------------------------------------|----------------------------|---------------------------|---------------------------|---------------------------|
+
+    | Dispute window       | Time for assertions to get confirmed during which
+    validaors can issue a challenge                         | 45818 blocks (~
+    6.4 days ) | 45818 blocks (~ 6.4 days) | 20 blocks (~ 4.0 minutes) | 20
+    blocks (~ 4.0 minutes) |
+
+    | Base stake           | Amount of stake required for a validator to make an
+    assertion                                             | 1
+    ETH                      | 1 ETH                     | 1 Goerli
+    ETH              | 1 Sepolia ETH             |
+
+    | Force-include period | Period after which a delayed message can be
+    included into the inbox without any action from the Sequencer | 5760 blocks
+    / 24 hours     | 5760 blocks / 24 hours    | 5760 blocks / 24 hours    |
+    5760 blocks / 24 hours    |
+
+    | Gas speed limit      | Target gas/sec, over which the congestion mechanism
+    activates                                             | 7,000,000
+    gas/sec          | 7,000,000 gas/sec         | 3,000,000 gas/sec         |
+    7,000,000 gas/sec         |
+
+    | Gas price floor      | Minimum gas
+    price                                                                                        
+    | 0.1 gwei                   | 0.01 gwei                 | 0.1
+    gwei                  | 0.1 gwei                  |
+
+    | Block gas limit      | Maximum amount of gas that all the transactions
+    inside a block are allowed to consume                     |
+    32,000,000                 | 32,000,000                |
+    20,000,000                | 32,000,000                |
+  title: 'How to Customise Orbit Chain''s Behaviour '
