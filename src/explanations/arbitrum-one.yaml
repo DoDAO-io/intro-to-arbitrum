@@ -1,0 +1,82 @@
+- key: working-of-roll-ups
+  title: Working of Roll ups
+  shortTitle: Rollups
+  details: >-
+    ## How does Arbitrum Rollup Work?
+
+
+    ### RBlocks
+
+    An RBlock within the Arbitrum Rollup protocol is a specialized type of block
+    that encapsulates the state and progress of the Layer 2 (L2) Arbitrum
+    network. Unlike traditional Ethereum Layer 1 blocks or the typical blocks
+    you might find in other Layer 2 solutions, RBlocks serve a unique purpose in
+    the Arbitrum ecosystem. They are part of a separate chain that the Arbitrum
+    rollup protocol manages, effectively acting as checkpoints or snapshots of
+    the L2 state at various points in time.
+
+
+    An RBlock in the Arbitrum Rollup chain carries its identifier, the number of
+    the last correct RBlock, the total of L2 blocks made, inbox messages used,
+    and a hash of the chain's outputs. These except the RBlock's number are the
+    proposer's unverified claims, which the protocol must confirm or reject. An
+    RBlock also implies the correctness of all preceding RBlocks back to the
+    origin and contests the validity of any direct older RBlocks. Validators can
+    challenge an RBlock before a deadline by proposing an alternative, which
+    could lead to a staked conflict resolution. Here is a step-by-step guide on
+    how the rollup chain works to confirm the rBlocks
+
+
+    ### Step 1: RBlocks Creation
+
+    Validators propose RBlocks, which form a chain managed by the Arbitrum
+    rollup protocol, distinct from Ethereum's Layer 1 and Nitro's Layer 2
+    blocks. When first proposed, RBlocks are 'unresolved' meaning their status
+    as either confirmed or rejected has not yet been determined. Over time, each
+    RBlock is resolved. Confirmed RBlocks become part of the chain's permanent
+    history.
+
+
+    ### Step 2: Chain History and Progress
+
+    Confirmed RBlocks are fully accepted and recorded by Ethereum's Layer 1
+    contracts. The most recent confirmed RBlock is known as the "latest
+    confirmed RBlock". Newer RBlocks are proposed and remain unconfirmed until
+    their resolution deadlines pass. The earliest of these is the "first
+    unresolved RBlock".
+
+
+    ### Step 3: Building on Proposed RBlocks
+
+    Validators can propose new RBlocks based on the latest proposed (but not yet
+    confirmed) RBlock, enabling the chain to grow continuously without waiting
+    for each RBlock's confirmation. Typically, proposed RBlocks are valid and
+    thus are eventually confirmed.
+
+
+    ### Step 4: Dealing with Malicious Validators
+
+    In cases where validators act maliciously by proposing incorrect RBlocks,
+    the protocol can handle a variety of conflict scenarios such as a confirmed
+    RBlock is fully accepted, a rejected RBlock is discarded for being
+    incorrect. Subsequent RBlocks can be rejected due to incorrect claims or
+    because they build on other rejected RBlocks. Unresolved RBlocks are
+    awaiting confirmation or rejection. If they are built on a rejected RBlock,
+    they will also be rejected.
+
+
+    ### Step 5: Resolving Conflicts
+
+    Conflicts between RBlocks which claim the same predecessor, will be resolved
+    by the protocol, with at least one being rejected. The protocol resolves
+    RBlocks in numerical order. If an RBlock is rejected, any subsequent RBlocks
+    depending on it are automatically rejected.
+
+
+    ### Step 6: Security Assurance
+
+    Despite potential conflicts, the security property of the rollup protocol
+    ensures that even if multiple parties act dishonestly, the correct chain
+    execution will be confirmed, safeguarding the integrity of the rollup chain.
+    Validators may stake ETH as a bond for proposing RBlocks. If they propose a
+    wrong RBlock, they will lose their stake, incentivizing honest behavior.

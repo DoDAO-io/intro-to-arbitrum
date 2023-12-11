@@ -193,6 +193,7 @@ topics:
       enhances the scalability of Ethereum but also maintains its security by
       enabling the confirmation of transactions and the processing of
       withdrawals back to Layer 1.
+    explanations: arbitrum-one.yaml
   - key: arbitrum-nova
     title: Arbitrum Nova
     details: jkwdnlwjekdnaiofkldnme.f/
