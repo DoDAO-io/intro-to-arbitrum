@@ -1,7 +1,7 @@
 {
   "key": "dodao-course-template",
   "title": "Introduction to Arbitrum",
-  "summary": "This is a course that provides a deeper understanding into the working and technicalities of Arbitrum, the leading scalability solution for Ethereum.",
+  "summary": "This is a course that provides a deeper understanding towards the working and technicalities of Arbitrum, a cutting-edge layer-2 scaling solution designed to enhance the capabilities of Ethereum, one of the most prominent blockchain platforms. In this course, we will delve into the intricacies of Arbitrum, exploring its two major chains: Arbitrum One and Arbitrum Nova. Our journey will guide you through the fundamentals of layer-2 solutions, the specific features and advancements of Arbitrum, and how it integrates with the Ethereum network to provide faster, more efficient transactions.\n\nThis course offers a blend of theoretical knowledge and practical insights. You will learn about the technical underpinnings of Arbitrum, including its unique approach to transaction processing and dispute resolution. The course also covers the differences between Arbitrum Classic and Nitro, highlighting the advancements in efficiency, gas fees, and Ethereum compatibility.\n\nWhether you are a developer looking to build on Arbitrum, an investor interested in understanding its impact on the Ethereum ecosystem, or simply a blockchain aficionado eager to expand your knowledge, this course provides valuable insights. By the end, you will have a thorough understanding of Arbitrum's role in the evolving landscape of blockchain technology and its potential to shape the future of decentralized applications. ",
   "details": "",
   "duration": "30 mins - 1 hour",
   "highlights": [
