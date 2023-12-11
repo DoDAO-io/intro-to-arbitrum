@@ -14,6 +14,11 @@
     within your Orbit chain's ecosystem.
 
 
+    <div align="center">
+      <img style="max-height:400px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_orbit_arbitrum_university_525/1701179466748_licensing.png"/>
+    </div>
+
+
     However, this license applies specifically to chains that settle to an
     Arbitrum-DAO-governed chain. If you wish to establish an independent Layer 2
     chain on Ethereum that does not settle to an Arbitrum-DAO chain, you must
@@ -51,6 +56,11 @@
     production, you'll choose a unique integer identifier that hasn’t been used
     on chain indexes like Chainlist.org. Enter a distinctive name for your Orbit
     chain that is easily recognizable to your users and developers.
+
+
+    <div align="center">
+      <img style="max-height:700px;margin-bottom:50px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_orbit_arbitrum_university_525/1701179515385_configuration.png"/>
+    </div>
 
 
     ### Step 3: Customise Specifications
