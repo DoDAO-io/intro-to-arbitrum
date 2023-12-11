@@ -115,3 +115,76 @@
     activity. This process ensures that only valid transactions are finalized,
     with the capability to penalize malicious actors, thereby maintaining the
     integrity of the rollup.  
+- key: arbitrum-chains
+  shortTitle: Types of Chains
+  details: >-
+    Arbitrum ecosystem consists of various chains with distinct features that
+    utilise unique technologies that enable ethereum scalability. The major
+    arbitrum chains include.
+
+
+    ### Arbitrum One
+
+    Arbitrum One is a Layer 2 optimistic rollup solution that enhances Ethereum
+    blockchain. It doesn't require any additional trust beyond that which is
+    inherent to Ethereum's Layer 1. Enabled by the Nitro technology stack,
+    Arbitrum One features efficient data handling and execution, improved
+    transaction compression, and compatibility with Ethereum's gas system,
+    streamlining the process while keeping security tight.
+
+
+    ### Arbitrum Nova
+
+    Arbitrum Nova is a Layer 2 scaling solution designed for high performance
+    and cost efficiency. It operates on the AnyTrust protocol, which is a
+    slightly less trustless system compared to Arbitrum One's Rollup protocol.
+    The primary distinction lies in the AnyTrust protocol's reliance on a Data
+    Availability Committee (DAC) to manage transaction data. This committee
+    ensures the speedy and efficient handling of Level 2 transaction data before
+    it is finalized on Ethereum's main chain. Arbitrum Nova is tailored for
+    applications where high throughput and affordability are prioritized.
+
+
+    ### Arbitrum Orbit
+
+    Arbitrum Orbit allows the creation of personalized chains that settle
+    transactions to Arbitrum's Layer 2 chains, such as Arbitrum One or Arbitrum
+    Nova. You have full control over your Orbit chain, with the ability to
+    tailor its privacy settings, permissions, governance structure, and fee
+    token according to your specific requirements. Orbit chains can be as open
+    or restricted as you prefer, offering a customizable path to
+    decentralization and the option to integrate ongoing enhancements from the
+    Arbitrum Nitro technology stack
+
+
+    ## How is arbiturm diferent from other Optimistic L2 Rollups?
+
+    Arbitrum's approach prioritizes a balance of speed, cost, security, and
+    developer accessibility, underpinning its leading market position. Some of
+    the major differences include:
+
+
+    ### Fraud Proofs
+
+    Arbitrum sets itself apart from other Optimistic L2 Rollups primarily
+    through its multi-round fraud proof system, which contrasts with
+    single-round fraud proofs used by platforms like Optimism. This system
+    verifies only challenged transactions, which may result in lower fees due to
+    decreased reliance on Layer 1 computations.
+
+
+    ### Virtual Machine Compatibility
+
+    The Arbitrum Virtual Machine (AVM) is more closely optimized for EVM coding
+    languages, making it developer-friendly as applications don't need to be
+    rewritten to transition from the EVM to the AVM. This contrasts with
+    Optimism's Virtual Machine (OVM), which has faced some compatibility issues
+    with the EVM.
+
+
+    ### Transaction Finality and Fees
+
+    Due to the multi-round fraud proof mechanism, transaction finality on
+    Arbitrum can be slower compared to some other rollups, but this trade-off
+    allows for lower fees because of reduced Layer 1 computation reliance​.
+  title: Arbitrum Chains
