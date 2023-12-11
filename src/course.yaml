@@ -1,13 +1,19 @@
 title: DoDAO Course Template
 key: dodao-course-template
-summary: |
-  This is a course template
+summary: >-
+  This is a course that provides a deeper understanding into the working and
+  technicalities of Arbitrum, the leading scalability solution for Ethereum.
 highlights:
   - Introduction
-publishStatus: Draft
+  - Arbitrum Nitro
+  - Arbitrum One
+  - Arbitrum Nova
+  - Arbitrum Orbit
+  - Arbitrum Stylus
+publishStatus: Live
 thumbnail: >-
   https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/CourseIcons/audit_and_monitoring.png
-details: '## Coming Soon'
+details: ''
 duration: 30 mins - 1 hour
 topics:
   - key: introduction
@@ -40,7 +46,6 @@ topics:
 courseAdmins:
   - '0x34d014758297c00fea49935fce172677904d51ef'
   - '0x2a6af0619be90d129ab0d70c10e25c097b6ec67d'
-coursePassContent: Pass content of Course !!!!!!!!!!
 topicConfig:
   showExplanations: true
   showHints: true
