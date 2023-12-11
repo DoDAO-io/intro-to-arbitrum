@@ -209,6 +209,7 @@
     Arbitrum can be slower compared to some other rollups, but this trade-off
     allows for lower fees because of reduced Layer 1 computation reliance​.
 - key: arbitrum-ecosystem
+  title: Arbitrum Ecosystem
   shortTitle: Arbitrum Community
   details: >-
     The Arbitrum ecosystem boasts a vibrant network of decentralized
@@ -263,6 +264,11 @@
     and resilience.
 
 
+    <div align="center">
+      <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_arbitrum_arbitrum_university_794/1700677255572_ecosystem.png"/>
+    </div>
+
+
 
     ## Decentralize governance
 
@@ -290,4 +296,3 @@
     more resilient and democratic infrastructure. This gradual transition allows
     the network to maintain continuity and stability while progressively
     mitigating risks and adapting to a decentralized governance structure.
-  title: Arbitrum Ecosystem
