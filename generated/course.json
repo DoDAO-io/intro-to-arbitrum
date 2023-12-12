@@ -374,36 +374,6 @@
           ]
         },
         {
-          "uuid": "82f18e94-3beb-439d-a25d-abadefe2f94a",
-          "type": "SingleChoice",
-          "content": "What does Arbitrum Nitro introduce to enhance the performance of Layer 1 (L1) nodes?",
-          "hint": "NoHint",
-          "explanation": "Arbitrum Nitro introduces advanced calldata compression, which reduces transaction costs even further. It also aligns EVM operation pricing with Ethereum and introduces additional synchronization with Ethereum L1 blocks.",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [],
-          "difficultyLevel": "Medium",
-          "choices": [
-            {
-              "content": "New cryptographic algorithms",
-              "key": "A"
-            },
-            {
-              "content": "Advanced calldata compression",
-              "key": "B"
-            },
-            {
-              "content": "A new consensus mechanism",
-              "key": "C"
-            },
-            {
-              "content": "A new type of smart contract",
-              "key": "D"
-            }
-          ]
-        },
-        {
           "uuid": "825baf42-a282-4fb9-b916-ee3957af0e91",
           "type": "SingleChoice",
           "content": "What is Arbitrum Nitro?",
