@@ -796,9 +796,9 @@
         {
           "uuid": "ff0fb04e-24dc-4f7a-9755-4f67f6074d72",
           "type": "SingleChoice",
-          "content": "What is Arbitrum Nova?",
+          "content": "What is the primary feature of Arbitrum Nova?",
           "hint": "",
-          "explanation": "",
+          "explanation": " Arbitrum Nova is a variant within the Arbitrum ecosystem that provides a high-performance blockchain solution.",
           "answerKeys": [
             "029bbaa0"
           ],
@@ -806,19 +806,19 @@
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "A high-performance blockchain solution within the Bitcoin ecosystem",
+              "content": "It operates as a standalone blockchain",
               "key": "A"
             },
             {
-              "content": "A high-performance blockchain solution within the Arbitrum ecosystem",
+              "content": "It provides a high-performance blockchain solution",
               "key": "029bbaa0"
             },
             {
-              "content": "A low-performance blockchain solution within the Ethereum ecosystem",
+              "content": "It is a Layer 1 solution",
               "key": "979f0dfc"
             },
             {
-              "content": "A low-performance blockchain solution within the Arbitrum ecosystem",
+              "content": "It uses traditional rollup technology",
               "key": "ca32cd73"
             }
           ]
