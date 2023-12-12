@@ -1380,6 +1380,36 @@
               "key": "D"
             }
           ]
+        },
+        {
+          "uuid": "3a8d4323-9e1c-4d52-abf2-9af9af68c975",
+          "type": "MultipleChoice",
+          "content": "How does Stylus enhance the capabilities of Arbitrum Nitro?",
+          "hint": "",
+          "explanation": "Stylus enhances Arbitrum Nitro's capabilities by enabling deterministic proving for any program that compiles to WASM, utilizing Arbitrum Nitro's unique fraud-proving abilities.",
+          "answerKeys": [
+            "8186e5f9"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "By eliminating the need for Ethereum's blockchain",
+              "key": "A"
+            },
+            {
+              "content": "By replacing the Arbitrum Nitro technology stack",
+              "key": "b5ada0aa"
+            },
+            {
+              "content": "By enabling deterministic proving for any program that compiles to WASM",
+              "key": "8186e5f9"
+            },
+            {
+              "content": "By limiting the types of smart contracts that can be created",
+              "key": "8c3925f6"
+            }
+          ]
         }
       ],
       "readings": [],
