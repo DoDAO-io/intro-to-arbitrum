@@ -702,6 +702,36 @@
               "key": "8316816b"
             }
           ]
+        },
+        {
+          "uuid": "de1d8268-75ce-423e-855e-2e30b1d4eb92",
+          "type": "MultipleChoice",
+          "content": "How does the dispute resolution process work in Arbitrum?",
+          "hint": "",
+          "explanation": "The dispute resolution process in Arbitrum involves iterative halving of the dispute and evaluation by an L1 contract to determine the correctness of claims.",
+          "answerKeys": [
+            "2f389dc9"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "Through a centralized authority",
+              "key": "A"
+            },
+            {
+              "content": "Through automatic smart contract execution",
+              "key": "8ad1e8d4"
+            },
+            {
+              "content": "Via community voting",
+              "key": "0ad9ac75"
+            },
+            {
+              "content": "By iterative halving and evaluation by an L1 contract",
+              "key": "2f389dc9"
+            }
+          ]
         }
       ],
       "readings": [],
