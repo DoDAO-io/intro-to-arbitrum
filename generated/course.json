@@ -344,36 +344,6 @@
           ]
         },
         {
-          "uuid": "170c7b19-41a7-45b0-a2e4-0ac90d2daafb",
-          "type": "SingleChoice",
-          "content": "What is Arbitrum Nitro?",
-          "hint": "NoHint",
-          "explanation": "Arbitrum Nitro is a significant technical upgrade for Arbitrum, a Layer 2 scaling solution for Ethereum. It aims to lower transaction fees and increase the processing capacity of Ethereum by moving contract computation and storage from the primary chain.",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [],
-          "difficultyLevel": "Medium",
-          "choices": [
-            {
-              "content": "A new cryptocurrency",
-              "key": "A"
-            },
-            {
-              "content": "A blockchain technology company",
-              "key": "B"
-            },
-            {
-              "content": "A technical upgrade for Arbitrum",
-              "key": "C"
-            },
-            {
-              "content": "A type of smart contract",
-              "key": "D"
-            }
-          ]
-        },
-        {
           "uuid": "c800321f-4f17-4f72-abda-6e068fa6a9f4",
           "type": "SingleChoice",
           "content": "What is the primary aim of Arbitrum Nitro?",
