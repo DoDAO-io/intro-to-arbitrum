@@ -972,6 +972,36 @@
               "key": "5bb5ef64"
             }
           ]
+        },
+        {
+          "uuid": "d6a7a5b2-ee6a-42fb-b0c1-20ac37a86633",
+          "type": "MultipleChoice",
+          "content": "What distinguishes Arbitrum Nova from Arbitrum One in terms of gas prices?",
+          "hint": "",
+          "explanation": "Arbitrum Nova's minimum gas price is 0.01 gwei, potentially making it 10x cheaper than Arbitrum One.",
+          "answerKeys": [
+            "7f717dad"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "Arbitrum Nova has a higher minimum gas price",
+              "key": "A"
+            },
+            {
+              "content": "Gas prices are the same for both",
+              "key": "ef91635a"
+            },
+            {
+              "content": "Arbitrum Nova uses Ethereum's gas pricing model",
+              "key": "d10d8211"
+            },
+            {
+              "content": "Arbitrum Nova's gas price is potentially 10x cheaper",
+              "key": "7f717dad"
+            }
+          ]
         }
       ],
       "readings": [],
