@@ -40,3 +40,26 @@
       key: c913ba52
     - content: To earn transaction fees
       key: 5c33c72a
+- uuid: fdc3a00a-c01f-466e-a130-e0a3d9a2532f
+  type: MultipleChoice
+  content: What determines the confirmation or rejection of an RBlock in Arbitrum?
+  hint: ''
+  explanation: >-
+    An RBlock's confirmation or rejection is determined by specific criteria,
+    including its relationship to its predecessor and the staking conditions of
+    validators.
+  answerKeys:
+    - A
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: >-
+        Specific criteria including the RBlock's predecessor and staking
+        conditions 
+      key: A
+    - content: Community voting
+      key: 62a8cbee
+    - content: The validators' consensus
+      key: 2ad70ee1
+    - content: The number of cryptocurrencies it processes
+      key: 8316816b
