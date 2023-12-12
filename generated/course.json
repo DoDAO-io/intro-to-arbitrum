@@ -138,6 +138,36 @@
               "key": "D"
             }
           ]
+        },
+        {
+          "uuid": "1417c24f-1ba0-4926-8ee1-bb817d550071",
+          "type": "MultipleChoice",
+          "content": "What is the primary goal of Arbitrum as a Layer 2 solution?",
+          "hint": "",
+          "explanation": "Arbitrum is designed to enhance the Ethereum blockchain's scalability and efficiency, not to replace it or create an alternative cryptocurrency.",
+          "answerKeys": [
+            "c7faa98a"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To replace Ethereum ",
+              "key": "A"
+            },
+            {
+              "content": "To enhance Ethereum's scalability and efficiency",
+              "key": "c7faa98a"
+            },
+            {
+              "content": "To create an alternative cryptocurrency",
+              "key": "5fbc34ce"
+            },
+            {
+              "content": "To decentralize governance",
+              "key": "a9876eaa"
+            }
+          ]
         }
       ],
       "readings": [],
