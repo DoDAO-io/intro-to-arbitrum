@@ -50,36 +50,6 @@
       ],
       "questions": [
         {
-          "uuid": "31d51ba4-1d36-4d6e-85c3-885d00027a30",
-          "type": "SingleChoice",
-          "content": "What are the benefits of Layer 2?",
-          "hint": "NoHint",
-          "explanation": "Layer 2 solutions offer increased transaction throughput, reduced costs, improved speed, enhanced scalability, and maintained security.",
-          "answerKeys": [
-            "D"
-          ],
-          "subTopics": [],
-          "difficultyLevel": "Medium",
-          "choices": [
-            {
-              "content": "Increased transaction costs",
-              "key": "A"
-            },
-            {
-              "content": "Decreased transaction speed",
-              "key": "B"
-            },
-            {
-              "content": "Reduced scalability",
-              "key": "C"
-            },
-            {
-              "content": "Increased transaction throughput, reduced costs, improved speed, enhanced scalability, and maintained security",
-              "key": "D"
-            }
-          ]
-        },
-        {
           "uuid": "1417c24f-1ba0-4926-8ee1-bb817d550071",
           "type": "MultipleChoice",
           "content": "What is the primary goal of Arbitrum as a Layer 2 solution?",
