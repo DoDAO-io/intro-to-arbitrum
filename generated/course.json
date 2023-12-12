@@ -1002,6 +1002,36 @@
               "key": "7f717dad"
             }
           ]
+        },
+        {
+          "uuid": "6bd31886-9fd4-4a72-91f5-ffdbb17e972f",
+          "type": "MultipleChoice",
+          "content": "What is a key difference between Arbitrum One and Arbitrum Nova in terms of data authenticity?",
+          "hint": "",
+          "explanation": "Arbitrum Nova uses AnyTrust technology with a Data Availability Committee for handling Layer 2 transaction data, whereas Arbitrum One posts this data on Ethereum's blockchain.",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "Arbitrum Nova uses AnyTrust technology with a Data Availability Committee",
+              "key": "A"
+            },
+            {
+              "content": "Arbitrum Nova posts Layer 2 transaction data on Ethereum's blockchain",
+              "key": "a9ffc008"
+            },
+            {
+              "content": "Arbitrum One uses a Data Availability Committee for data handling",
+              "key": "c0e2c257"
+            },
+            {
+              "content": "Arbitrum One uses AnyTrust technology",
+              "key": "0f029a27"
+            }
+          ]
         }
       ],
       "readings": [],
