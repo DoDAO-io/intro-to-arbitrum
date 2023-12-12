@@ -11,11 +11,13 @@ summary: >-
   network to provide faster, more efficient transactions.
 
 
+
   This course offers a blend of theoretical knowledge and practical insights.
   You will learn about the technical underpinnings of Arbitrum, including its
   unique approach to transaction processing and dispute resolution. The course
   also covers the differences between Arbitrum Classic and Nitro, highlighting
   the advancements in efficiency, gas fees, and Ethereum compatibility.
+
 
 
   Whether you are a developer looking to build on Arbitrum, an investor
@@ -178,6 +180,7 @@ topics:
       Ethereum-compatible contracts and transactions, and manages the transfer
       and management of ETH and tokens on the chain. 
     explanations: arbitrum-nitro.yaml
+    questions: arbitrum-nitro.yaml
   - key: arbitrum-one
     title: Arbitrum One
     details: >-

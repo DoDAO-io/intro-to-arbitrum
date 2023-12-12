@@ -1,7 +1,7 @@
 {
   "key": "intro-to-arbitrum",
   "title": "Introduction to Arbitrum",
-  "summary": "This is a course that provides a deeper understanding towards the working and technicalities of Arbitrum, a cutting-edge layer-2 scaling solution designed to enhance the capabilities of Ethereum, one of the most prominent blockchain platforms. In this course, we will delve into the intricacies of Arbitrum, exploring its two major chains: Arbitrum One and Arbitrum Nova. Our journey will guide you through the fundamentals of layer-2 solutions, the specific features and advancements of Arbitrum, and how it integrates with the Ethereum network to provide faster, more efficient transactions.\n\nThis course offers a blend of theoretical knowledge and practical insights. You will learn about the technical underpinnings of Arbitrum, including its unique approach to transaction processing and dispute resolution. The course also covers the differences between Arbitrum Classic and Nitro, highlighting the advancements in efficiency, gas fees, and Ethereum compatibility.\n\nWhether you are a developer looking to build on Arbitrum, an investor interested in understanding its impact on the Ethereum ecosystem, or simply a blockchain aficionado eager to expand your knowledge, this course provides valuable insights. By the end, you will have a thorough understanding of Arbitrum's role in the evolving landscape of blockchain technology and its potential to shape the future of decentralized applications. ",
+  "summary": "This is a course that provides a deeper understanding towards the working and technicalities of Arbitrum, a cutting-edge layer-2 scaling solution designed to enhance the capabilities of Ethereum, one of the most prominent blockchain platforms. In this course, we will delve into the intricacies of Arbitrum, exploring its two major chains: Arbitrum One and Arbitrum Nova. Our journey will guide you through the fundamentals of layer-2 solutions, the specific features and advancements of Arbitrum, and how it integrates with the Ethereum network to provide faster, more efficient transactions.\n\n\nThis course offers a blend of theoretical knowledge and practical insights. You will learn about the technical underpinnings of Arbitrum, including its unique approach to transaction processing and dispute resolution. The course also covers the differences between Arbitrum Classic and Nitro, highlighting the advancements in efficiency, gas fees, and Ethereum compatibility.\n\n\nWhether you are a developer looking to build on Arbitrum, an investor interested in understanding its impact on the Ethereum ecosystem, or simply a blockchain aficionado eager to expand your knowledge, this course provides valuable insights. By the end, you will have a thorough understanding of Arbitrum's role in the evolving landscape of blockchain technology and its potential to shape the future of decentralized applications. ",
   "details": "",
   "duration": "30 mins - 1 hour",
   "highlights": [
@@ -71,7 +71,278 @@
           "details": "## How Transactions Work?\n\nDesigned to enhance efficiency and streamline workflows, the Nitro design emerges as an evidence to innovation in the Ethereum ecosystem. The transaction pocess in Arbitrum Nitro technology consists of the following cricial steps:\n\n#### Step 1: Sequencing and Deterministic Execution\n\nWhen a user sends a transaction on the Nitro chain, it is signed with their wallet and given to the Sequencer. The Sequencer orders transactions and publishes them, after which they're processed to update the Nitro chain state, producing Layer 2 blocks as needed. Invalid transactions are rejected to keep the sequence authentic. The Sequencer uses a real-time alert system for immediate soft finality and batches transactions on the Ethereum chain for hard finality. The latter involves compressing transactions using \"brotli\" and posting them to Ethereum, where their finalization ensures the sequence's immutability on Nitro.\n\n<div align=\"center\">\n  <img style=\"max-height:600px;margin-bottom:40px\" src=\"https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677469815_transaction_lifecycle.png\"/>\n</div>\n\n#### Step 2: State Transition Function\n\nIn Arbitrum Nitro's transaction lifecycle, the State Transition Function (STF) is crucial for updating the blockchain's state. Once a transaction is submitted, it enters the Nitro system either through a Sequencer or directly into the inbox. The STF then processes these transactions, taking the current state and the transaction data to compute a new state. It performs all the necessary calculations and state alterations in a deterministic manner, such as adjusting account balances and modifying smart contract states. This transition is then reflected on the chain, with the STF ensuring that the state progresses correctly and consistently after each transaction, maintaining the integrity and continuity of the blockchain's ledger.\n\n#### Step 3: Posting on Layer 1\n\nIn Arbitrum Nitro's transaction lifecycle, data posting on Layer 1 is where transaction inputs are recorded as calldata on the Ethereum blockchain, allowing for full transparency and enabling anyone to reconstruct the chain's state. This process supports the network's optimistic rollup approach, where validators post proposed rollup blocks to Layer 1, which are assumed correct unless challenged within a roughly one-week period. If unchallenged, the block is confirmed, but disputed blocks trigger Arbitrum's dispute resolution protocol to determine accuracy, penalizing dishonest validators with deposit forfeiture. This design ensures the integrity of posted data while minimizing fraud.\n\n## Nitro Under the Hood\n\nArbitrum Nitro's innovative architecture is designed to streamline both the execution of smart contracts and the verification process in case of disputes. Central to this architecture is the implementation of \"geth at the core,\" which utilizes go-ethereum, the commonly used Ethereum node software, written in the Go programming language. This foundational approach is manifested in a layered structure. Nitro harnesses the power of this setup to optimise performance while maintaining the robustness of security and verification processes.\n\n### Layers of Nitro Node\n\nNitro utilizes the same source code for two distinct tasks: execution and proving, by employing \"geth at the core.\" The Nitro node software, predominantly written in Go like go-ethereum (geth), consists of three main layers—the base layer with core geth functionalities, the middle layer called ArbOS providing Layer 2 features, and the top layer handling node operations, also derived from geth. This layered design forms the \"geth sandwich,\" with geth as the bread and ArbOS as the filling.\n\n<div align=\"center\">\n  <img style=\"max-height:600px;margin-bottom:40px\" src=\"https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677506703_layers.png\"/>\n</div>\n\n### Dual Compilation Strategy\n\nFor execution, the source code is compiled into native code using the standard Go compiler, customized for the specific architecture of the node deployment. In contrast, for proving—particularly important when disputes arise—the same source code, especially the State Transition Function (STF), is compiled to WebAssembly (WASM), a portable machine code format. This WASM code is then transformed into WAVM, a modified version for proof procedures. When a dispute occurs, the verification of the STF's results is conducted with reference to the WAVM code, ensuring that the same logic governs both normal operation and the verification process during disputes."
         }
       ],
-      "questions": [],
+      "questions": [
+        {
+          "uuid": "278626bf-5f9a-46b7-8e21-333e11f855e4",
+          "type": "SingleChoice",
+          "content": "What is Arbitrum Nitro?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro is a significant technical upgrade for Arbitrum, a Layer 2 scaling solution for Ethereum. It aims to lower transaction fees and increase the processing capacity of Ethereum by moving contract computation and storage from the primary chain.",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "A new cryptocurrency",
+              "key": "A"
+            },
+            {
+              "content": "A technical upgrade for Arbitrum",
+              "key": "B"
+            },
+            {
+              "content": "A type of blockchain",
+              "key": "C"
+            },
+            {
+              "content": "A new Ethereum token",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "5ce1fa81-299c-45ef-b1ba-37f0df79fbb8",
+          "type": "SingleChoice",
+          "content": "What does Arbitrum Nitro introduce to reduce transaction costs?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro introduces advanced calldata compression, which reduces transaction costs.",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "New blockchain technology",
+              "key": "A"
+            },
+            {
+              "content": "New Ethereum token",
+              "key": "B"
+            },
+            {
+              "content": "Advanced calldata compression",
+              "key": "C"
+            },
+            {
+              "content": "New type of smart contract",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "7678eca5-dd57-4381-871c-5e1b87819bc6",
+          "type": "SingleChoice",
+          "content": "What is a distinctive feature of Arbitrum Nitro compared to other layer 2 solutions?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro supports the Ethereum Virtual Machine (EVM), which means that existing Ethereum contracts and transactions can run on Arbitrum without any changes. This distinguishes Arbitrum Nitro from other layer 2 solutions as each have their own VMs thereby requiring modifications for integration.",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "It uses a different blockchain",
+              "key": "A"
+            },
+            {
+              "content": "It has its own cryptocurrency",
+              "key": "B"
+            },
+            {
+              "content": "It uses a different type of smart contract",
+              "key": "C"
+            },
+            {
+              "content": "It supports the Ethereum Virtual Machine (EVM) without requiring modifications",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "170c7b19-41a7-45b0-a2e4-0ac90d2daafb",
+          "type": "SingleChoice",
+          "content": "What is Arbitrum Nitro?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro is a significant technical upgrade for Arbitrum, a Layer 2 scaling solution for Ethereum. It aims to lower transaction fees and increase the processing capacity of Ethereum by moving contract computation and storage from the primary chain.",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "A new cryptocurrency",
+              "key": "A"
+            },
+            {
+              "content": "A blockchain technology company",
+              "key": "B"
+            },
+            {
+              "content": "A technical upgrade for Arbitrum",
+              "key": "C"
+            },
+            {
+              "content": "A type of smart contract",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "c800321f-4f17-4f72-abda-6e068fa6a9f4",
+          "type": "SingleChoice",
+          "content": "What is the primary aim of Arbitrum Nitro?",
+          "hint": "NoHint",
+          "explanation": "The primary aim of Arbitrum Nitro is to lower transaction fees and increase the processing capacity of Ethereum by moving contract computation and storage from the primary chain.",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To create a new cryptocurrency",
+              "key": "A"
+            },
+            {
+              "content": "To compete with Bitcoin",
+              "key": "B"
+            },
+            {
+              "content": "To replace the Ethereum blockchain",
+              "key": "C"
+            },
+            {
+              "content": "To lower transaction fees and increase the processing capacity of Ethereum",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "82f18e94-3beb-439d-a25d-abadefe2f94a",
+          "type": "SingleChoice",
+          "content": "What does Arbitrum Nitro introduce to enhance the performance of Layer 1 (L1) nodes?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro introduces advanced calldata compression, which reduces transaction costs even further. It also aligns EVM operation pricing with Ethereum and introduces additional synchronization with Ethereum L1 blocks.",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "New cryptographic algorithms",
+              "key": "A"
+            },
+            {
+              "content": "Advanced calldata compression",
+              "key": "B"
+            },
+            {
+              "content": "A new consensus mechanism",
+              "key": "C"
+            },
+            {
+              "content": "A new type of smart contract",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "825baf42-a282-4fb9-b916-ee3957af0e91",
+          "type": "SingleChoice",
+          "content": "What is Arbitrum Nitro?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro is a significant technical upgrade for Arbitrum, a Layer 2 scaling solution for Ethereum. It aims to lower transaction fees and increase the processing capacity of Ethereum by moving contract computation and storage from the primary chain. It is designed to be more compatible with the Ethereum Virtual Machine (EVM) and provides a better user experience with lower fees and faster transactions.",
+          "answerKeys": [
+            "C"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "A new cryptocurrency",
+              "key": "A"
+            },
+            {
+              "content": "A type of blockchain",
+              "key": "B"
+            },
+            {
+              "content": "A technical upgrade for Arbitrum",
+              "key": "C"
+            },
+            {
+              "content": "A type of smart contract",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "28e331e5-6ce2-47ad-a5e5-496cc98f7596",
+          "type": "SingleChoice",
+          "content": "What does Arbitrum Nitro introduce to reduce transaction costs?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro introduces advanced calldata compression, which reduces transaction costs even further.",
+          "answerKeys": [
+            "B"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "New blockchain technology",
+              "key": "A"
+            },
+            {
+              "content": "Advanced calldata compression",
+              "key": "B"
+            },
+            {
+              "content": "Increased transaction speed",
+              "key": "C"
+            },
+            {
+              "content": "Reduced storage costs",
+              "key": "D"
+            }
+          ]
+        },
+        {
+          "uuid": "9d8b3531-d4bf-429f-b1ab-b6e3b2bdc908",
+          "type": "SingleChoice",
+          "content": "What feature of Arbitrum Nitro allows developers to easily integrate it without making any modifications?",
+          "hint": "NoHint",
+          "explanation": "Arbitrum Nitro supports the Ethereum Virtual Machine (EVM), which means that existing Ethereum contracts and transactions can run on Arbitrum without any changes.",
+          "answerKeys": [
+            "D"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "Support for WebAssembly code",
+              "key": "A"
+            },
+            {
+              "content": "Deterministic transactions",
+              "key": "B"
+            },
+            {
+              "content": "Advanced calldata compression",
+              "key": "C"
+            },
+            {
+              "content": "Support for the Ethereum Virtual Machine (EVM)",
+              "key": "D"
+            }
+          ]
+        }
+      ],
       "readings": [],
       "summaries": []
     },
