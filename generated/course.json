@@ -586,9 +586,9 @@
         {
           "uuid": "99be12d4-ad30-47ac-97db-fddb94cd91a0",
           "type": "SingleChoice",
-          "content": "What does the Arbitrum Rollup Protocol operate in tandem with?",
-          "hint": "NoHint",
-          "explanation": "The Arbitrum Rollup Protocol operates in tandem with Ethereum's Layer 1. It doesn't decide the outcomes of transactions but instead confirms the results that are already determined by the sequence of messages in the chain's inbox.",
+          "content": "What are RBlocks in the Arbitrum Rollup protocol?",
+          "hint": "",
+          "explanation": "RBlocks are specialized blocks that encapsulate the state and progress of the Arbitrum network, acting as checkpoints of the Layer 2 state.",
           "answerKeys": [
             "B"
           ],
@@ -596,19 +596,19 @@
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "Bitcoin's blockchain",
+              "content": "Smart contracts",
               "key": "A"
             },
             {
-              "content": "Ethereum's Layer 1",
+              "content": "Specialized blocks that encapsulate the state of the Arbitrum network",
               "key": "B"
             },
             {
-              "content": "Offchain Labs' mainnet",
+              "content": "Replacement for Ethereum blocks",
               "key": "C"
             },
             {
-              "content": "Ethereum's Layer 2",
+              "content": "New cryptocurrencies",
               "key": "D"
             }
           ]
