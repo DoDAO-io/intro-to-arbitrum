@@ -316,9 +316,9 @@
         {
           "uuid": "7678eca5-dd57-4381-871c-5e1b87819bc6",
           "type": "SingleChoice",
-          "content": "What is a distinctive feature of Arbitrum Nitro compared to other layer 2 solutions?",
-          "hint": "NoHint",
-          "explanation": "Arbitrum Nitro supports the Ethereum Virtual Machine (EVM), which means that existing Ethereum contracts and transactions can run on Arbitrum without any changes. This distinguishes Arbitrum Nitro from other layer 2 solutions as each have their own VMs thereby requiring modifications for integration.",
+          "content": "What feature of Arbitrum Nitro simplifies integration for developers?",
+          "hint": "",
+          "explanation": "EVM Compatibility in Nitro allows existing Ethereum contracts and transactions to run without modifications.",
           "answerKeys": [
             "D"
           ],
@@ -326,19 +326,19 @@
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "It uses a different blockchain",
+              "content": "Separate blockchain",
               "key": "A"
             },
             {
-              "content": "It has its own cryptocurrency",
+              "content": "Unique coding language",
               "key": "B"
             },
             {
-              "content": "It uses a different type of smart contract",
+              "content": "Independent virtual machine",
               "key": "C"
             },
             {
-              "content": "It supports the Ethereum Virtual Machine (EVM) without requiring modifications",
+              "content": "EVM Compatibility",
               "key": "D"
             }
           ]
