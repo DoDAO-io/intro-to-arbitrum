@@ -1,0 +1,16 @@
+- uuid: 985e489c-f1a5-4018-a35b-8a7c65bf6758
+  type: SingleChoice
+  content: What is Stylus primarily designed for?
+  hint: ''
+  explanation: >-
+    Stylus is designed to enhance the development of smart contracts on the
+    Arbitrum platform, which is part of the Ethereum ecosystem.
+  answerKeys:
+    - ee88c770
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: To enhance the development of mobile applications
+      key: A
+    - content: To enhance the development of smart contracts on the Arbitrum platform
+      key: ee88c770
