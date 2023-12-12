@@ -22,30 +22,24 @@
         L1
 - uuid: 47de4b73-0e7d-4915-b188-185a03d1a2ac
   type: SingleChoice
-  content: >-
-    What is the role of the Data Availability Committee (DAC) in the AnyTrust
-    protocol?
+  content: What does the AnyTrust protocol in Arbitrum Nova aim to achieve?
   hint: NoHint
   explanation: >-
-    The DAC has the task of efficiently handling Layer 2 transaction
-    data—storing it, batching it, and then posting it to Ethereum's Layer 1.
-    This allows Arbitrum Nova to offer enhanced performance and
-    cost-effectiveness.
+    The AnyTrust protocol is designed to reduce costs by incorporating a slight
+    trust assumption in the Arbitrum network.
   answerKeys:
     - B
   subTopics: []
   difficultyLevel: Medium
   choices:
-    - content: To manage the distribution of cryptocurrencies
-      key: A
-    - content: >-
-        To handle Layer 2 transaction data—storing it, batching it, and then
-        posting it to Ethereum's Layer 1
-      key: B
-    - content: To oversee the creation of new cryptocurrencies
-      key: C
-    - content: To regulate the use of the AnyTrust protocol
-      key: D
+    - key: A
+      content: To replace Ethereum
+    - key: B
+      content: To reduce costs by incorporating a slight trust assumption
+    - key: C
+      content: To create a new blockchain
+    - key: D
+      content: To introduce a full trust model
 - uuid: 783ac64d-7d05-4917-b9a0-4a9b6715a14d
   type: SingleChoice
   content: What is the main benefit of the AnyTrust protocol?
