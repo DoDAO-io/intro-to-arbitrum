@@ -21,3 +21,24 @@
       key: de7ac2b9
     - content: To replace Ethereum's mainnet
       key: bebc53f4
+- uuid: ee721830-d879-4601-ae9d-b5d921f95e2c
+  type: MultipleChoice
+  content: What technology stack does Arbitrum Orbit utilize?
+  hint: ''
+  explanation: >-
+    Arbitrum Orbit utilizes the Arbitrum Nitro technology stack, offering
+    benefits like Nitro's fraud proofs, advanced data compression, and EVM+
+    compatibility.
+  answerKeys:
+    - A
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: The Arbitrum Nitro technology stack
+      key: A
+    - content: Its own unique blockchain technology
+      key: 57674e8e
+    - content: The Ethereum blockchain directly
+      key: aa42d46d
+    - content: A traditional database system
+      key: f4708987
