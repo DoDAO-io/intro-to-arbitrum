@@ -374,36 +374,6 @@
           ]
         },
         {
-          "uuid": "28e331e5-6ce2-47ad-a5e5-496cc98f7596",
-          "type": "SingleChoice",
-          "content": "What does Arbitrum Nitro introduce to reduce transaction costs?",
-          "hint": "NoHint",
-          "explanation": "Arbitrum Nitro introduces advanced calldata compression, which reduces transaction costs even further.",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [],
-          "difficultyLevel": "Medium",
-          "choices": [
-            {
-              "content": "New blockchain technology",
-              "key": "A"
-            },
-            {
-              "content": "Advanced calldata compression",
-              "key": "B"
-            },
-            {
-              "content": "Increased transaction speed",
-              "key": "C"
-            },
-            {
-              "content": "Reduced storage costs",
-              "key": "D"
-            }
-          ]
-        },
-        {
           "uuid": "9d8b3531-d4bf-429f-b1ab-b6e3b2bdc908",
           "type": "SingleChoice",
           "content": "What feature of Arbitrum Nitro allows developers to easily integrate it without making any modifications?",
