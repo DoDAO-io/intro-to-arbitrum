@@ -50,36 +50,6 @@
       ],
       "questions": [
         {
-          "uuid": "653ad6d3-553e-4c41-a7c8-3d0fb4376dc5",
-          "type": "SingleChoice",
-          "content": "What is Arbitrum?",
-          "hint": "NoHint",
-          "explanation": "Arbitrum is a Layer 2 scaling solution designed to enhance the Ethereum blockchain's scalability and efficiency. It processes transactions separately from Ethereum's main chain and utilizes Rollup technology to combine multiple transactions into one, increasing throughput and reducing costs.",
-          "answerKeys": [
-            "C"
-          ],
-          "subTopics": [],
-          "difficultyLevel": "Medium",
-          "choices": [
-            {
-              "content": "A type of cryptocurrency",
-              "key": "A"
-            },
-            {
-              "content": "A blockchain system",
-              "key": "B"
-            },
-            {
-              "content": "A Layer 2 scaling solution for Ethereum",
-              "key": "C"
-            },
-            {
-              "content": "A type of smart contract",
-              "key": "D"
-            }
-          ]
-        },
-        {
           "uuid": "d4d2a73b-34a8-4afc-8645-aea873a9bb65",
           "type": "SingleChoice",
           "content": "What is the primary purpose of Layer 2 solutions?",
