@@ -642,6 +642,36 @@
               "key": "9d1a279b"
             }
           ]
+        },
+        {
+          "uuid": "f77090ad-3355-4fc1-aefa-076dc6d18be3",
+          "type": "MultipleChoice",
+          "content": "What is the purpose of staking in the Arbitrum network?",
+          "hint": "",
+          "explanation": "Staking in the Arbitrum network involves validators depositing ETH to support the network's operations and maintain the integrity of the chain.",
+          "answerKeys": [
+            "ec6f3feb"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To create new tokens",
+              "key": "A"
+            },
+            {
+              "content": "To support the network operations and maintain the integrity of the chain",
+              "key": "ec6f3feb"
+            },
+            {
+              "content": "To vote on network upgrades",
+              "key": "c913ba52"
+            },
+            {
+              "content": "To earn transaction fees",
+              "key": "5c33c72a"
+            }
+          ]
         }
       ],
       "readings": [],
