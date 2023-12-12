@@ -64,22 +64,23 @@
       content: By replacing the EVM entirely
 - uuid: 0aec8b89-b126-47e8-ad62-56f7a7bdc984
   type: SingleChoice
-  content: What does Stylus allow for that was previously impractical?
+  content: >-
+    What unique security feature does Stylus offer in smart contract
+    development?
   hint: NoHint
   explanation: >-
-    Stylus enables previously impractical use cases with more than tenfold
-    computational and over a hundredfold memory efficiency improvements. It
-    allows for the deployment of custom cryptography libraries.
+    Stylus includes an Opt-In Reentrancy Protection feature, which automatically
+    guards against reentrancy, a common vulnerability in smart contracts.
   answerKeys:
-    - D
+    - A
   subTopics: []
   difficultyLevel: Medium
   choices:
-    - content: Deployment of custom gaming libraries
-      key: A
-    - content: Deployment of custom website design libraries
-      key: B
-    - content: Deployment of custom mobile app development libraries
-      key: C
-    - content: Deployment of custom cryptography libraries
-      key: D
+    - key: A
+      content: Opt-In Reentrancy Protection
+    - key: B
+      content: Automatic cryptocurrency trading
+    - key: C
+      content: Unlimited gas supply
+    - key: D
+      content: Blockchain anonymization
