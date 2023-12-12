@@ -346,29 +346,29 @@
         {
           "uuid": "c800321f-4f17-4f72-abda-6e068fa6a9f4",
           "type": "SingleChoice",
-          "content": "What is the primary aim of Arbitrum Nitro?",
+          "content": "How does the transaction execution in Arbitrum Nitro differ from that in Arbitrum Classic?",
           "hint": "NoHint",
-          "explanation": "The primary aim of Arbitrum Nitro is to lower transaction fees and increase the processing capacity of Ethereum by moving contract computation and storage from the primary chain.",
+          "explanation": " Nitro compiles Go code to WASM for low-level instructions, unlike Classic which uses the AVM.",
           "answerKeys": [
-            "D"
+            "B"
           ],
           "subTopics": [],
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "To create a new cryptocurrency",
+              "content": "Nitro does not support Ethereum smart contracts ",
               "key": "A"
             },
             {
-              "content": "To compete with Bitcoin",
+              "content": "Nitro uses WebAssembly (Wasm) for low-level instructions",
               "key": "B"
             },
             {
-              "content": "To replace the Ethereum blockchain",
+              "content": "Nitro uses a different blockchain than Ethereum",
               "key": "C"
             },
             {
-              "content": "To lower transaction fees and increase the processing capacity of Ethereum",
+              "content": "Nitro charges higher transaction fees",
               "key": "D"
             }
           ]
