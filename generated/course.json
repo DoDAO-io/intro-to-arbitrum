@@ -168,6 +168,36 @@
               "key": "c51be441"
             }
           ]
+        },
+        {
+          "uuid": "a67aec75-7edb-459d-b0e2-cf1de420b928",
+          "type": "MultipleChoice",
+          "content": "What is the function of Stylus within the Arbitrum ecosystem?",
+          "hint": "",
+          "explanation": "Stylus extends smart contract development on the Ethereum blockchain to languages like Rust, C, and C++.",
+          "answerKeys": [
+            "33abc446"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To act as a Layer 1 blockchain",
+              "key": "A"
+            },
+            {
+              "content": "To serve as a new cryptocurrency",
+              "key": "289dca0b"
+            },
+            {
+              "content": "To enable smart contract development in languages like Rust, C, and C++ ",
+              "key": "33abc446"
+            },
+            {
+              "content": "To provide decentralized governance ",
+              "key": "86c78433"
+            }
+          ]
         }
       ],
       "readings": [],
