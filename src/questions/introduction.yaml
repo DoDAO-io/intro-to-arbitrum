@@ -61,3 +61,23 @@
       key: 27a6ab8c
     - content: The main chain they operate on
       key: b9b48ecb
+- uuid: 7a3b26e2-c24d-4f5f-8f32-c41a54697816
+  type: MultipleChoice
+  content: In the Arbitrum ecosystem, what is Arbitrum One?
+  hint: ''
+  explanation: >-
+    Arbitrum One is a Layer 2 optimistic rollup solution that enhances Ethereum
+    blockchain
+  answerKeys:
+    - c51be441
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: A Layer 1 blockchain
+      key: A
+    - content: A data storage protocol
+      key: 77585b04
+    - content: A standalone cryptocurrency
+      key: 7fa21ce0
+    - content: A Layer 2 optimistic rollup solution
+      key: c51be441
