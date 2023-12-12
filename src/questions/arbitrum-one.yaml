@@ -84,3 +84,23 @@
       key: 0ad9ac75
     - content: By iterative halving and evaluation by an L1 contract
       key: 2f389dc9
+- uuid: 71fd932f-4791-41a6-8e3d-96d5a400fd1e
+  type: MultipleChoice
+  content: What is a key benefit of the Arbitrum Rollup's security model?
+  hint: ''
+  explanation: >-
+    The Arbitrum Rollup's security model leverages the robustness of Ethereum's
+    Layer 1, ensuring trustlessness and decentralization.
+  answerKeys:
+    - 96d9583c
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: It creates a new blockchain
+      key: A
+    - content: It leverages Ethereum's Layer 1 for robustness
+      key: 96d9583c
+    - content: It operates independently of Ethereum
+      key: f4c19170
+    - content: It generates new cryptocurrencies
+      key: 743ac0f0
