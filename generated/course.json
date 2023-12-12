@@ -1152,6 +1152,36 @@
               "key": "a1a8332c"
             }
           ]
+        },
+        {
+          "uuid": "be179eb6-7cf0-48f6-b172-02144dd7c505",
+          "type": "MultipleChoice",
+          "content": "What is required for creating an independent Layer 2 chain using Arbitrum Nitro codebase that doesn’t settle to an Arbitrum-DAO-governed chain?",
+          "hint": "",
+          "explanation": "For establishing an independent Layer 2 chain on Ethereum that does not settle to an Arbitrum-DAO chain, one must obtain a custom license either directly from Offchain Labs or through a proposal to the Arbitrum DAO.",
+          "answerKeys": [
+            "a8b6816b"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "Permission from Ethereum's mainnet developers",
+              "key": "A"
+            },
+            {
+              "content": "A custom license from Offchain Labs or a proposal to the Arbitrum DAO",
+              "key": "a8b6816b"
+            },
+            {
+              "content": "No additional requirements, as Arbitrum Orbit is completely open-source",
+              "key": "023d4695"
+            },
+            {
+              "content": "A standard internet domain registration",
+              "key": "c3a96f93"
+            }
+          ]
         }
       ],
       "readings": [],
