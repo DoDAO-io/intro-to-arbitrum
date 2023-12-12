@@ -886,9 +886,9 @@
         {
           "uuid": "783ac64d-7d05-4917-b9a0-4a9b6715a14d",
           "type": "SingleChoice",
-          "content": "What is the main benefit of the AnyTrust protocol?",
+          "content": "How does the AnyTrust security model balance trust and decentralization?",
           "hint": "NoHint",
-          "explanation": "The AnyTrust protocol reduces costs on the Arbitrum system by entrusting a Committee with data storage and distribution, thus minimizing the data posted to Ethereum's mainnet. It also ensures data integrity while lessening the gas fees typically incurred for data posting.",
+          "explanation": "AnyTrust security balances trust and decentralization by forming a Data Availability Committee, ensuring data integrity and accessibility.",
           "answerKeys": [
             "D"
           ],
@@ -896,19 +896,19 @@
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "It increases the speed of transactions",
+              "content": "By using a centralized authority",
               "key": "A"
             },
             {
-              "content": "It allows for the creation of new cryptocurrencies",
+              "content": "By removing all trust assumptions",
               "key": "B"
             },
             {
-              "content": "It increases the security of the Arbitrum system",
+              "content": "By posting all data on Ethereum's mainnet",
               "key": "C"
             },
             {
-              "content": "It reduces costs and ensures data integrity on the Arbitrum system",
+              "content": "By forming a Data Availability Committee",
               "key": "D"
             }
           ]
