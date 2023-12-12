@@ -60,3 +60,25 @@
       content: By posting all data on Ethereum's mainnet
     - key: D
       content: By forming a Data Availability Committee
+- uuid: 4273db9b-f3ba-40d8-8c0f-0fd3a1ef65be
+  type: MultipleChoice
+  content: >-
+    What is the purpose of Data Availability Certificates (DACerts) in the
+    AnyTrust protocol?
+  hint: ''
+  explanation: >-
+    DACerts in the AnyTrust protocol ensure the accessibility of data in the
+    Arbitrum network.
+  answerKeys:
+    - 90e3a4af
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: To create new tokens
+      key: A
+    - content: To ensure data accessibility in the Arbitrum network
+      key: 90e3a4af
+    - content: To replace Ethereum's smart contracts
+      key: c3458d4d
+    - content: To manage cryptocurrency exchanges
+      key: 66db73bc
