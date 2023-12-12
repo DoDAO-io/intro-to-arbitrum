@@ -376,29 +376,29 @@
         {
           "uuid": "9d8b3531-d4bf-429f-b1ab-b6e3b2bdc908",
           "type": "SingleChoice",
-          "content": "What feature of Arbitrum Nitro allows developers to easily integrate it without making any modifications?",
+          "content": "What is the role of the Sequencer in Arbitrum Nitro’s transaction process?",
           "hint": "NoHint",
-          "explanation": "Arbitrum Nitro supports the Ethereum Virtual Machine (EVM), which means that existing Ethereum contracts and transactions can run on Arbitrum without any changes.",
+          "explanation": "The Sequencer in Nitro orders transactions and publishes them, updating the Nitro chain state.",
           "answerKeys": [
-            "D"
+            "B"
           ],
           "subTopics": [],
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "Support for WebAssembly code",
+              "content": " It stakes on the validity of the transactions",
               "key": "A"
             },
             {
-              "content": "Deterministic transactions",
+              "content": "It orders transactions and publishes them",
               "key": "B"
             },
             {
-              "content": "Advanced calldata compression",
+              "content": "It creates new cryptocurrencies",
               "key": "C"
             },
             {
-              "content": "Support for the Ethereum Virtual Machine (EVM)",
+              "content": "It independently verifies transactions",
               "key": "D"
             }
           ]
