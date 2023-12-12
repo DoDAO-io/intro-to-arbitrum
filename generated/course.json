@@ -556,29 +556,29 @@
         {
           "uuid": "a1662bcc-7e38-4e38-bdba-da59d6570678",
           "type": "SingleChoice",
-          "content": "What is the purpose of the Arbitrum Rollup Protocol?",
-          "hint": "NoHint",
-          "explanation": "The purpose of the Arbitrum Rollup Protocol is twofold. Firstly, it serves as a trustless method to verify transaction results and to identify and penalize dishonest parties. Secondly, it relieves Ethereum from the burden of processing every transaction, thereby allowing for scalable operations that Ethereum alone could not efficiently monitor.",
+          "content": "What does the Arbitrum Rollup Protocol primarily do?",
+          "hint": "",
+          "explanation": "The Arbitrum Rollup Protocol serves as a trustless method to verify transaction results and resolve disputes.",
           "answerKeys": [
-            "D"
+            "C"
           ],
           "subTopics": [],
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "To create new cryptocurrencies",
+              "content": "Replaces Ethereum's Layer 1 ",
               "key": "A"
             },
             {
-              "content": "To replace Ethereum",
+              "content": "Creates new cryptocurrencies",
               "key": "B"
             },
             {
-              "content": "To process transactions on the Bitcoin network",
+              "content": "Confirms the accuracy of transaction results and resolves disputes",
               "key": "C"
             },
             {
-              "content": "To verify transaction results and enhance Ethereum's scalability",
+              "content": "Acts as an independent blockchain",
               "key": "D"
             }
           ]
