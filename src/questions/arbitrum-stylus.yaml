@@ -23,26 +23,24 @@
         C++
 - uuid: cfe7b6aa-b301-46a3-9f20-1c10cab2552f
   type: SingleChoice
-  content: What is Arbitrum Stylus primarily designed for?
+  content: What is the advantage of using WebAssembly (WASM) in Stylus?
   hint: NoHint
   explanation: >-
-    Arbitrum Stylus is a tool designed to enhance the development of smart
-    contracts on the Arbitrum platform, part of the Ethereum ecosystem. It
-    allows developers to utilize a wide array of programming languages that
-    compile into WebAssembly (WASM).
+    WASM's modern binary format in Stylus offers faster performance and reduced
+    gas costs due to its speed, portability, and security features.
   answerKeys:
     - C
   subTopics: []
   difficultyLevel: Medium
   choices:
-    - content: Enhancing video game development
-      key: A
-    - content: Improving website design
-      key: B
-    - content: Enhancing the development of smart contracts
-      key: C
-    - content: Improving mobile app development
-      key: D
+    - key: A
+      content: It simplifies the Ethereum protocol
+    - key: B
+      content: It converts smart contracts into traditional databases
+    - key: C
+      content: It provides faster performance and reduced gas costs
+    - key: D
+      content: It only supports C++
 - uuid: cbba941f-38b6-4ba7-8087-45d764cd6128
   type: SingleChoice
   content: What is one of the key advantages of Stylus?
