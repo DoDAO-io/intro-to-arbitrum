@@ -462,6 +462,36 @@
               "key": "acf48ea4"
             }
           ]
+        },
+        {
+          "uuid": "24ea2b0d-5f29-48ea-898a-eb1b237ae5e8",
+          "type": "MultipleChoice",
+          "content": "What is the purpose of dual compilation in Arbitrum Nitro?",
+          "hint": "",
+          "explanation": "Dual compilation in Nitro is used for execution (compiled to native code) and proving (compiled to WebAssembly), especially important during disputes.",
+          "answerKeys": [
+            "c99730cd"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To create two separate blockchains",
+              "key": "A"
+            },
+            {
+              "content": "To process transactions differently",
+              "key": "19781690"
+            },
+            {
+              "content": "To manage execution and proving during disputes",
+              "key": "c99730cd"
+            },
+            {
+              "content": "To replace Ethereum's virtual machine",
+              "key": "4c91129f"
+            }
+          ]
         }
       ],
       "readings": [],
