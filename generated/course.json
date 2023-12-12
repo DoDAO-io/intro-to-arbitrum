@@ -1182,6 +1182,36 @@
               "key": "c3a96f93"
             }
           ]
+        },
+        {
+          "uuid": "e1c30a0e-9f03-4957-8540-c42bc341120e",
+          "type": "MultipleChoice",
+          "content": "In the Arbitrum Orbit chain deployment process, what is the role of the 'Owner' address?",
+          "hint": "",
+          "explanation": "In the deployment process of an Orbit chain, the 'Owner' address is provided to own and manage the chain's base contracts, playing a crucial role in the administration of the chain.",
+          "answerKeys": [
+            "a20b8b78"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": " It is used for cryptocurrency transactions only B)  C)  D) ",
+              "key": "A"
+            },
+            {
+              "content": "It is a placeholder and has no practical use",
+              "key": "d03f8911"
+            },
+            {
+              "content": "It serves as a validator for transaction integrity",
+              "key": "05d22b27"
+            },
+            {
+              "content": "It manages the Orbit chain's base contracts",
+              "key": "a20b8b78"
+            }
+          ]
         }
       ],
       "readings": [],
