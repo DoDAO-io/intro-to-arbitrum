@@ -527,8 +527,8 @@
           "uuid": "702d37b2-9df8-4f1c-8f2c-ee2960ba52a2",
           "type": "SingleChoice",
           "content": "What is Arbitrum One?",
-          "hint": "NoHint",
-          "explanation": "Arbitrum One is a Layer 2 optimistic rollup solution developed by Offchain Labs. It enhances Ethereum's performance and user experience by handling transactions off the Ethereum Mainnet (Layer 1). It operates on the Arbitrum Rollup protocol and settles to Ethereum's Layer 1, offering high-performance dApps with lower transaction costs and Ethereum-level security.",
+          "hint": "",
+          "explanation": "Arbitrum One is a Layer 2 optimistic rollup solution developed to enhance Ethereum's performance and user experience by handling transactions off the Ethereum Mainnet.",
           "answerKeys": [
             "A"
           ],
@@ -536,19 +536,19 @@
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "A Layer 2 optimistic rollup solution developed by Offchain Labs",
+              "content": "A Layer 2 optimistic rollup solution",
               "key": "A"
             },
             {
-              "content": "A cryptocurrency like Bitcoin",
+              "content": "A Layer 1 blockchain",
               "key": "B"
             },
             {
-              "content": "A type of blockchain technology",
+              "content": "A smart contract platform",
               "key": "C"
             },
             {
-              "content": "A software for creating smart contracts",
+              "content": "A new cryptocurrency",
               "key": "D"
             }
           ]
