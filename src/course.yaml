@@ -1,6 +1,17 @@
 title: Introduction to Arbitrum
 key: intro-to-arbitrum
-summary: >-
+summary: 'This is a course that provides a deeper understanding towards '
+highlights:
+  - Introduction
+  - Arbitrum Nitro
+  - Arbitrum One
+  - Arbitrum Nova
+  - Arbitrum Orbit
+  - Arbitrum Stylus
+publishStatus: Live
+thumbnail: >-
+  https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/CourseIcons/audit_and_monitoring.png
+details: >-
   This is a course that provides a deeper understanding towards the working and
   technicalities of Arbitrum, a cutting-edge layer-2 scaling solution designed
   to enhance the capabilities of Ethereum, one of the most prominent blockchain
@@ -26,17 +37,6 @@ summary: >-
   valuable insights. By the end, you will have a thorough understanding of
   Arbitrum's role in the evolving landscape of blockchain technology and its
   potential to shape the future of decentralized applications. 
-highlights:
-  - Introduction
-  - Arbitrum Nitro
-  - Arbitrum One
-  - Arbitrum Nova
-  - Arbitrum Orbit
-  - Arbitrum Stylus
-publishStatus: Live
-thumbnail: >-
-  https://d31h13bdjwgzxs.cloudfront.net/courses/DoDAO/CourseIcons/audit_and_monitoring.png
-details: ''
 duration: 30 mins - 1 hour
 topics:
   - key: introduction
