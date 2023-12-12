@@ -1264,22 +1264,30 @@
         {
           "uuid": "985e489c-f1a5-4018-a35b-8a7c65bf6758",
           "type": "SingleChoice",
-          "content": "What is Stylus primarily designed for?",
+          "content": "What is the primary feature of Stylus in smart contract development?",
           "hint": "",
-          "explanation": "Stylus is designed to enhance the development of smart contracts on the Arbitrum platform, which is part of the Ethereum ecosystem.",
+          "explanation": "Stylus enables developers to use a variety of programming languages, such as Rust, C, and C++, which compile into WebAssembly (WASM), for writing EVM-compatible smart contracts.",
           "answerKeys": [
-            "ee88c770"
+            "596a0dc4"
           ],
           "subTopics": [],
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "To enhance the development of mobile applications",
+              "content": "It serves as a new blockchain platform ",
               "key": "A"
             },
             {
-              "content": "To enhance the development of smart contracts on the Arbitrum platform",
+              "content": "It exclusively supports Solidity",
               "key": "ee88c770"
+            },
+            {
+              "content": "It replaces Ethereum's EVM",
+              "key": "99111d58"
+            },
+            {
+              "content": "It allows the use of multiple programming languages like Rust, C, and C++",
+              "key": "596a0dc4"
             }
           ]
         },
