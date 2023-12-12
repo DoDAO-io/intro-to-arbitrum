@@ -18,3 +18,23 @@
       key: 5fbc34ce
     - content: To decentralize governance
       key: a9876eaa
+- uuid: d58855c7-e94c-4f47-8833-337e1eb733fd
+  type: MultipleChoice
+  content: Which technology does Arbitrum use to increase throughput and reduce costs?
+  hint: ''
+  explanation: >-
+    Arbitrum utilizes Rollup technology to combine multiple transactions into
+    one, increasing throughput and reducing costs.
+  answerKeys:
+    - A
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: ' Rollup technology'
+      key: A
+    - content: 'Smart Contracts '
+      key: '356e0311'
+    - content: Sidechains
+      key: a8d8013c
+    - content: State channels
+      key: ad1a6587
