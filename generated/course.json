@@ -612,6 +612,36 @@
               "key": "D"
             }
           ]
+        },
+        {
+          "uuid": "29235f9e-38b3-4eb9-b6d1-7ed1fca8275c",
+          "type": "MultipleChoice",
+          "content": "What is the role of validators in the Arbitrum Rollup protocol?",
+          "hint": "",
+          "explanation": "Validators in the Arbitrum Rollup protocol are responsible for proposing and ensuring the accuracy of RBlocks.",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To propose and ensure the accuracy of RBlocks",
+              "key": "A"
+            },
+            {
+              "content": "To create new cryptocurrencies ",
+              "key": "b20f4e83"
+            },
+            {
+              "content": "To replace Ethereum's consensus mechanism",
+              "key": "15912322"
+            },
+            {
+              "content": "To develop new smart contracts",
+              "key": "9d1a279b"
+            }
+          ]
         }
       ],
       "readings": [],
