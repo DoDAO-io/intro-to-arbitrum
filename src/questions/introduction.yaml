@@ -53,14 +53,14 @@
   subTopics: []
   difficultyLevel: Medium
   choices:
-    - content: 'The way they handle transaction finality '
-      key: A
-    - content: Their compatibility with Ethereum
-      key: ebe845ee
-    - content: The type of proofing mechanisms used
-      key: 27a6ab8c
-    - content: The main chain they operate on
-      key: b9b48ecb
+    - key: A
+      content: 'The way they handle transaction finality '
+    - key: ebe845ee
+      content: Their compatibility with Ethereum
+    - key: 27a6ab8c
+      content: The type of fraud proofing mechanisms used
+    - key: b9b48ecb
+      content: The main chain they operate on
 - uuid: 7a3b26e2-c24d-4f5f-8f32-c41a54697816
   type: MultipleChoice
   content: In the Arbitrum ecosystem, what is Arbitrum One?
