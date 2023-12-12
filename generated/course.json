@@ -1212,6 +1212,36 @@
               "key": "a20b8b78"
             }
           ]
+        },
+        {
+          "uuid": "2656d677-073d-4ae5-a9bd-25f739666cba",
+          "type": "MultipleChoice",
+          "content": "What is a key benefit of using Arbitrum Orbit for scaling solutions?",
+          "hint": "",
+          "explanation": "A key benefit of Arbitrum Orbit is its ability to facilitate scalability by allowing the creation of multiple chains, distributing activities across various environments.",
+          "answerKeys": [
+            "a1c809ef"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "It serves as a replacement for Ethereum's security model",
+              "key": "A"
+            },
+            {
+              "content": "It increases the transaction fees for better revenue",
+              "key": "a6dd7501"
+            },
+            {
+              "content": "It allows the creation of multiple chains, easing bottlenecks on a single chain",
+              "key": "a1c809ef"
+            },
+            {
+              "content": "It restricts the types of dApps that can be built",
+              "key": "6c0d6f53"
+            }
+          ]
         }
       ],
       "readings": [],
