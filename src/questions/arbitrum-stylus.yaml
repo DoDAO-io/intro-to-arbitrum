@@ -14,3 +14,67 @@
       key: A
     - content: To enhance the development of smart contracts on the Arbitrum platform
       key: ee88c770
+- uuid: cfe7b6aa-b301-46a3-9f20-1c10cab2552f
+  type: SingleChoice
+  content: What is Arbitrum Stylus primarily designed for?
+  hint: NoHint
+  explanation: >-
+    Arbitrum Stylus is a tool designed to enhance the development of smart
+    contracts on the Arbitrum platform, part of the Ethereum ecosystem. It
+    allows developers to utilize a wide array of programming languages that
+    compile into WebAssembly (WASM).
+  answerKeys:
+    - C
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: Enhancing video game development
+      key: A
+    - content: Improving website design
+      key: B
+    - content: Enhancing the development of smart contracts
+      key: C
+    - content: Improving mobile app development
+      key: D
+- uuid: cbba941f-38b6-4ba7-8087-45d764cd6128
+  type: SingleChoice
+  content: What is one of the key advantages of Stylus?
+  hint: NoHint
+  explanation: >-
+    One of the key advantages of Stylus is its multi-language support. It
+    broadens access to Arbitrum's blockchain development by accommodating a
+    variety of programming languages.
+  answerKeys:
+    - B
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: It only supports the Solidity language
+      key: A
+    - content: It supports multiple programming languages
+      key: B
+    - content: It only supports the C++ language
+      key: C
+    - content: It only supports the Rust language
+      key: D
+- uuid: 0aec8b89-b126-47e8-ad62-56f7a7bdc984
+  type: SingleChoice
+  content: What does Stylus allow for that was previously impractical?
+  hint: NoHint
+  explanation: >-
+    Stylus enables previously impractical use cases with more than tenfold
+    computational and over a hundredfold memory efficiency improvements. It
+    allows for the deployment of custom cryptography libraries.
+  answerKeys:
+    - D
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: Deployment of custom gaming libraries
+      key: A
+    - content: Deployment of custom website design libraries
+      key: B
+    - content: Deployment of custom mobile app development libraries
+      key: C
+    - content: Deployment of custom cryptography libraries
+      key: D
