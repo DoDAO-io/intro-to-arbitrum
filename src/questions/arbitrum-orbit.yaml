@@ -11,16 +11,16 @@
   subTopics: []
   difficultyLevel: Medium
   choices:
-    - content: 'To create new cryptocurrencies B)  C)  D) '
-      key: A
-    - content: To serve as a standalone Layer 1 blockchain
-      key: f5911d69
-    - content: >-
+    - key: A
+      content: 'To create new cryptocurrencies '
+    - key: f5911d69
+      content: To serve as a standalone Layer 1 blockchain
+    - key: de7ac2b9
+      content: >-
         To enable the creation of private blockchain chains with customizable
         features
-      key: de7ac2b9
-    - content: To replace Ethereum's mainnet
-      key: bebc53f4
+    - key: bebc53f4
+      content: To replace Ethereum's mainnet
 - uuid: ee721830-d879-4601-ae9d-b5d921f95e2c
   type: MultipleChoice
   content: What technology stack does Arbitrum Orbit utilize?
