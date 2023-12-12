@@ -38,3 +38,26 @@
       key: a8d8013c
     - content: State channels
       key: ad1a6587
+- uuid: ba5cbbd5-3cad-460b-b477-0b90a7001f8c
+  type: MultipleChoice
+  content: >-
+    What is the primary difference between Optimistic Rollups and Zero-Knowledge
+    Rollups (ZK-Rollups)?
+  hint: ''
+  explanation: >-
+    Optimistic Rollups assume transactions are valid unless challenged, while
+    ZK-Rollups use a cryptographic proof (zk-SNARK or zk-STARK) to attest to
+    their validity.
+  answerKeys:
+    - 27a6ab8c
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: 'The way they handle transaction finality '
+      key: A
+    - content: Their compatibility with Ethereum
+      key: ebe845ee
+    - content: The type of proofing mechanisms used
+      key: 27a6ab8c
+    - content: The main chain they operate on
+      key: b9b48ecb
