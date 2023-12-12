@@ -1,1 +1,22 @@
-[]
+- uuid: b06a828c-b4e6-4c1b-a491-4c131d9094d2
+  type: MultipleChoice
+  content: >-
+    In the context of Arbitrum Nitro, what is the State Transition Function
+    (STF) responsible for?
+  hint: ''
+  explanation: >-
+    The STF in Nitro processes transactions to compute a new state, ensuring
+    correct and consistent progression of the blockchain's ledger.
+  answerKeys:
+    - cfc84186
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: Validating the transactions
+      key: A
+    - content: Creating new independent chains
+      key: ecba1137
+    - content: Updating the blockchain’s state
+      key: cfc84186
+    - content: Notify about challenge period
+      key: c59df727
