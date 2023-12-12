@@ -286,9 +286,9 @@
         {
           "uuid": "5ce1fa81-299c-45ef-b1ba-37f0df79fbb8",
           "type": "SingleChoice",
-          "content": "What does Arbitrum Nitro introduce to reduce transaction costs?",
+          "content": "What does Arbitrum Nitro introduce to enhance transaction efficiency?",
           "hint": "NoHint",
-          "explanation": "Arbitrum Nitro introduces advanced calldata compression, which reduces transaction costs.",
+          "explanation": "Nitro introduces advanced calldata compression, reducing transaction costs and enhancing efficiency.",
           "answerKeys": [
             "C"
           ],
@@ -296,19 +296,19 @@
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "New blockchain technology",
+              "content": "An alternative to smart contracts",
               "key": "A"
             },
             {
-              "content": "New Ethereum token",
+              "content": "A replacement for Ethereum's main chain",
               "key": "B"
             },
             {
-              "content": "Advanced calldata compression",
+              "content": " Advanced calldata compression",
               "key": "C"
             },
             {
-              "content": "New type of smart contract",
+              "content": "A new cryptocurrency",
               "key": "D"
             }
           ]
