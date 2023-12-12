@@ -20,3 +20,23 @@
       key: cfc84186
     - content: Notify about challenge period
       key: c59df727
+- uuid: 7f93b24b-b64f-495c-ad16-031c20d7c75c
+  type: MultipleChoice
+  content: What does the 'geth at the core' architecture in Arbitrum Nitro imply?
+  hint: ''
+  explanation: >-
+    'Geth at the core' refers to the use of go-ethereum for core functionalities
+    in Nitro's architecture.
+  answerKeys:
+    - acf48ea4
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: 'Replacement of Ethereum''s core '
+      key: A
+    - content: Elimination of Ethereum smart contracts
+      key: bd7b701d
+    - content: Introduction of a new blockchain
+      key: 740e18ab
+    - content: Use of go-ethereum for core functionalities
+      key: acf48ea4
