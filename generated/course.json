@@ -198,6 +198,36 @@
               "key": "86c78433"
             }
           ]
+        },
+        {
+          "uuid": "7a7892c1-9cf3-4b77-a387-175c3abcad31",
+          "type": "MultipleChoice",
+          "content": "What distinguishes Arbitrum from other Optimistic L2 Rollups?",
+          "hint": "",
+          "explanation": " Arbitrum differs from other Optimistic L2 Rollups mainly through its multi-round fraud proof system, as opposed to single-round fraud proofs used by platforms like Optimism.",
+          "answerKeys": [
+            "c3425502"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "Its reliance on zero-knowledge proofs",
+              "key": "A"
+            },
+            {
+              "content": "Its use of a multi-round fraud proof system",
+              "key": "c3425502"
+            },
+            {
+              "content": "The absence of any fraud proof system",
+              "key": "fa85d4a8"
+            },
+            {
+              "content": "Its use of a single-round fraud proof system ",
+              "key": "3401eebb"
+            }
+          ]
         }
       ],
       "readings": [],
