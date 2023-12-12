@@ -1062,7 +1062,38 @@
           "title": "How to Customise Orbit Chain's Behaviour "
         }
       ],
-      "questions": [],
+      "questions": [
+        {
+          "uuid": "69bb1c04-1f3d-4fe8-a10d-ae43018be7f2",
+          "type": "MultipleChoice",
+          "content": "What is the primary function of Arbitrum Orbit?",
+          "hint": "",
+          "explanation": "Arbitrum Orbit enables the creation of private blockchain chains with customizable features like governance and fee structures, which settle transactions on Arbitrum's Layer 2 ecosystems.",
+          "answerKeys": [
+            "de7ac2b9"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To create new cryptocurrencies B)  C)  D) ",
+              "key": "A"
+            },
+            {
+              "content": "To serve as a standalone Layer 1 blockchain",
+              "key": "f5911d69"
+            },
+            {
+              "content": "To enable the creation of private blockchain chains with customizable features",
+              "key": "de7ac2b9"
+            },
+            {
+              "content": "To replace Ethereum's mainnet",
+              "key": "bebc53f4"
+            }
+          ]
+        }
+      ],
       "readings": [],
       "summaries": []
     },

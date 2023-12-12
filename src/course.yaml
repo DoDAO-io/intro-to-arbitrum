@@ -385,6 +385,7 @@ topics:
       increasing the adoption and diversity of dApps within the blockchain
       space.
     explanations: arbitrum-orbit.yaml
+    questions: arbitrum-orbit.yaml
   - key: arbitrum-stylus
     title: Arbitrum Stylus
     details: >-
