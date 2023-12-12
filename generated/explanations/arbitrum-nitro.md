@@ -1,0 +1,61 @@
+## Header
+This is the course header. This will be added on top of every page. Go to [DoDAO.io](https://www.dodao.io) to know more.
+
+ ---
+ 
+ ## Arbitrum Nitro
+ 
+ **Nitro vs Classic**        
+
+Here is the comparison between Arbitrum Nitro and Arbitrum Classic (original version of Arbitrum):
+
+| Feature                                  | Arbitrum Classic                                              | Arbitrum Nitro                                                  |
+|------------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------------|
+| Goal                                     | Execution environment resembling EVM as second layer to Ethereum | Execution environment resembling EVM as second layer to Ethereum |
+| Virtual Machine Used                     | Arbitrum Virtual Machine (AVM)                                  | WebAssembly (Wasm)                                              |
+| Low-Level Instructions                   | Uses AVM for low-level instructions                             | Compiles Go code to WASM for low-level instructions             |
+| Architecture                             | Relies on AVM for execution environment                         | Direct usage of Geth's EVM implementation, enhancing efficiency |
+| Gas Fees and Ethereum Compatibility      | Higher fees compared to Nitro, due to less optimized execution environment | Lower fees and better Ethereum compatibility due to native execution of Go code |
+| Codebase Simplicity                      | More complex due to custom AVM, posing higher technical risks   | Simpler and more accessible codebase, reducing technical risks  |
+| Coding Languages                         | Solidity or Vyper                                                | Go (a more common language)                                     |
+| Code Conversion                          | EVM bytecode converted to AVM bytecode                           | Uses Wasm only when there's a dispute                           |
+| Transaction Management and Fraud Proofs  | AVM bytecode runs transactions and generates fraud proofs        | Checkpoints summarize transactions; Wasm used for disputes      |
+| Dispute Resolution                       | Validators inspect AVM bytecode in case of disputes              | Validators agree on block before examining Wasm details         |
+| Efficiency and Resource Management       | Less efficient, prepares for problems even if they do not occur  | More efficient, converts to Wasm only during disputes, saving time and resources | 
+ **Arbitrum Nitro Design **        
+## How Transactions Work?
+
+Designed to enhance efficiency and streamline workflows, the Nitro design emerges as an evidence to innovation in the Ethereum ecosystem. The transaction pocess in Arbitrum Nitro technology consists of the following cricial steps:
+
+#### Step 1: Sequencing and Deterministic Execution
+
+When a user sends a transaction on the Nitro chain, it is signed with their wallet and given to the Sequencer. The Sequencer orders transactions and publishes them, after which they're processed to update the Nitro chain state, producing Layer 2 blocks as needed. Invalid transactions are rejected to keep the sequence authentic. The Sequencer uses a real-time alert system for immediate soft finality and batches transactions on the Ethereum chain for hard finality. The latter involves compressing transactions using "brotli" and posting them to Ethereum, where their finalization ensures the sequence's immutability on Nitro.
+
+<div align="center">
+  <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677469815_transaction_lifecycle.png"/>
+</div>
+
+#### Step 2: State Transition Function
+
+In Arbitrum Nitro's transaction lifecycle, the State Transition Function (STF) is crucial for updating the blockchain's state. Once a transaction is submitted, it enters the Nitro system either through a Sequencer or directly into the inbox. The STF then processes these transactions, taking the current state and the transaction data to compute a new state. It performs all the necessary calculations and state alterations in a deterministic manner, such as adjusting account balances and modifying smart contract states. This transition is then reflected on the chain, with the STF ensuring that the state progresses correctly and consistently after each transaction, maintaining the integrity and continuity of the blockchain's ledger.
+
+#### Step 3: Posting on Layer 1
+
+In Arbitrum Nitro's transaction lifecycle, data posting on Layer 1 is where transaction inputs are recorded as calldata on the Ethereum blockchain, allowing for full transparency and enabling anyone to reconstruct the chain's state. This process supports the network's optimistic rollup approach, where validators post proposed rollup blocks to Layer 1, which are assumed correct unless challenged within a roughly one-week period. If unchallenged, the block is confirmed, but disputed blocks trigger Arbitrum's dispute resolution protocol to determine accuracy, penalizing dishonest validators with deposit forfeiture. This design ensures the integrity of posted data while minimizing fraud.
+
+## Nitro Under the Hood
+
+Arbitrum Nitro's innovative architecture is designed to streamline both the execution of smart contracts and the verification process in case of disputes. Central to this architecture is the implementation of "geth at the core," which utilizes go-ethereum, the commonly used Ethereum node software, written in the Go programming language. This foundational approach is manifested in a layered structure. Nitro harnesses the power of this setup to optimise performance while maintaining the robustness of security and verification processes.
+
+### Layers of Nitro Node
+
+Nitro utilizes the same source code for two distinct tasks: execution and proving, by employing "geth at the core." The Nitro node software, predominantly written in Go like go-ethereum (geth), consists of three main layers—the base layer with core geth functionalities, the middle layer called ArbOS providing Layer 2 features, and the top layer handling node operations, also derived from geth. This layered design forms the "geth sandwich," with geth as the bread and ArbOS as the filling.
+
+<div align="center">
+  <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nitro_arbitrum_university_560/1700677506703_layers.png"/>
+</div>
+
+### Dual Compilation Strategy
+
+For execution, the source code is compiled into native code using the standard Go compiler, customized for the specific architecture of the node deployment. In contrast, for proving—particularly important when disputes arise—the same source code, especially the State Transition Function (STF), is compiled to WebAssembly (WASM), a portable machine code format. This WASM code is then transformed into WAVM, a modified version for proof procedures. When a dispute occurs, the verification of the STF's results is conducted with reference to the WAVM code, ensuring that the same logic governs both normal operation and the verification process during disputes. 
+ 

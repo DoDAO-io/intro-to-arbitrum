@@ -1,0 +1,110 @@
+## Header
+This is the course header. This will be added on top of every page. Go to [DoDAO.io](https://www.dodao.io) to know more.
+
+ ---
+ 
+ ## Arbitrum One
+ 
+ **Working of Roll ups**        
+## How does Arbitrum Rollup Work?
+
+### RBlocks
+An RBlock within the Arbitrum Rollup protocol is a specialized type of block that encapsulates the state and progress of the Layer 2 (L2) Arbitrum network. Unlike traditional Ethereum Layer 1 blocks or the typical blocks you might find in other Layer 2 solutions, RBlocks serve a unique purpose in the Arbitrum ecosystem. They are part of a separate chain that the Arbitrum rollup protocol manages, effectively acting as checkpoints or snapshots of the L2 state at various points in time.
+
+An RBlock in the Arbitrum Rollup chain carries its identifier, the number of the last correct RBlock, the total of L2 blocks made, inbox messages used, and a hash of the chain's outputs. These except the RBlock's number are the proposer's unverified claims, which the protocol must confirm or reject. An RBlock also implies the correctness of all preceding RBlocks back to the origin and contests the validity of any direct older RBlocks. Validators can challenge an RBlock before a deadline by proposing an alternative, which could lead to a staked conflict resolution. Here is a step-by-step guide on how the rollup chain works to confirm the rBlocks
+
+### Step 1: RBlocks Creation
+Validators propose RBlocks, which form a chain managed by the Arbitrum rollup protocol, distinct from Ethereum's Layer 1 and Nitro's Layer 2 blocks. When first proposed, RBlocks are 'unresolved' meaning their status as either confirmed or rejected has not yet been determined. Over time, each RBlock is resolved. Confirmed RBlocks become part of the chain's permanent history.
+
+### Step 2: Chain History and Progress
+Confirmed RBlocks are fully accepted and recorded by Ethereum's Layer 1 contracts. The most recent confirmed RBlock is known as the "latest confirmed RBlock". Newer RBlocks are proposed and remain unconfirmed until their resolution deadlines pass. The earliest of these is the "first unresolved RBlock".
+
+### Step 3: Building on Proposed RBlocks
+Validators can propose new RBlocks based on the latest proposed (but not yet confirmed) RBlock, enabling the chain to grow continuously without waiting for each RBlock's confirmation. Typically, proposed RBlocks are valid and thus are eventually confirmed.
+
+<div align="center">
+  <img style="max-height:600px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_one_arbitrum_university_177/1701106968706_working_or%20roll%20up.png"/>
+</div>
+
+### Step 4: Dealing with Malicious Validators
+In cases where validators act maliciously by proposing incorrect RBlocks, the protocol can handle a variety of conflict scenarios such as a confirmed RBlock is fully accepted, a rejected RBlock is discarded for being incorrect. Subsequent RBlocks can be rejected due to incorrect claims or because they build on other rejected RBlocks. Unresolved RBlocks are awaiting confirmation or rejection. If they are built on a rejected RBlock, they will also be rejected.
+
+### Step 5: Resolving Conflicts
+Conflicts between RBlocks which claim the same predecessor, will be resolved by the protocol, with at least one being rejected. The protocol resolves RBlocks in numerical order. If an RBlock is rejected, any subsequent RBlocks depending on it are automatically rejected.
+
+### Step 6: Security Assurance
+Despite potential conflicts, the security property of the rollup protocol ensures that even if multiple parties act dishonestly, the correct chain execution will be confirmed, safeguarding the integrity of the rollup chain. Validators may stake ETH as a bond for proposing RBlocks. If they propose a wrong RBlock, they will lose their stake, incentivizing honest behavior. 
+ **Roll up Security**        
+## The Roll up security
+Arbitrum Rollup's security model leverages the robustness of Ethereum's Layer 1 to offer a Layer 2 scaling solution that doesn't compromise on trustlessness or decentralization. By utilizing a unique combination of on-chain data availability and off-chain computation, it ensures that even if all but one validator acts maliciously, the integrity of transactions is preserved. Moreover, the interactive dispute resolution process allows any honest participant to challenge incorrect claims by staking, thereby maintaining the overall security and reliability of the network. 
+
+<div align="center">
+  <img style="max-height:300px;margin-bottom:20px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_one_arbitrum_university_177/1701107044878_validator_network.png"/>
+</div>
+
+### Validators
+Validators are essential participants in the Arbitrum Rollup protocol, responsible for proposing and ensuring the accuracy of RBlocks in the network. Some validators, known as stakers, back their commitments with an ETH deposit, which they lose if found cheating. In most cases, only one staker is active to validate the current state unless disputes arise. While the role is intended to be open to all, Arbitrum One currently uses an allowlist for validators. Any honest validator is empowered to enforce the correct processing of transactions, maintaining the chain's trustlessness and security.
+
+## Staking
+Staking the process of holding funds in a cryptocurrency wallet to support the operations of a network. Participants lock or hold their tokens in a wallet to perform various network functions such as validating transactions, maintaining security, and governance. Here's a step-by-step process of staking within the Arbitrum network:
+
+### Step 1: Stake Deposit
+Validators who choose to become stakers deposit ETH into Arbitrum Layer 1 contracts. These deposits are held as collateral and are at risk if the staker is involved in a losing challenge. A single stake can cover a chain of RBlocks. Stakers are automatically staked on the latest confirmed RBlock and may also opt to stake on a successor to that RBlock, committing to a sequence that represents a single, coherent claim about the chain's history. 
+
+### Step 2: Staking Conditions
+Validators not currently staked can place a stake on the latest confirmed RBlock by depositing the minimum stake amount. Validators already staked on an RBlock can extend their stake to one successor of that RBlock without additional deposits. Creating a new RBlock as a successor to an RBlock you're staked on is considered an extension of your stake.  If a validator is staked only on the latest confirmed RBlock, they (or anyone else) can request a refund of their stake.
+
+<div align="center">
+  <img style="max-height:800px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_one_arbitrum_university_177/1701169197131_stakes.png"/>
+</div>
+
+### Step 3: Creating New RBlocks
+To propose a new RBlock, a validator must be a staker and have an active stake on the RBlock's predecessor. This requirement ensures validators have a vested interest in the accuracy of their proposed RBlocks. The protocol tracks the required stake amount, which typically matches the base stake amount set by the Nitro chain. If the chain is progressing slowly in confirming RBlocks, the required stake amount may temporarily increase.
+
+### Step 4: Commitment and Resolution
+Once staked on an RBlock, a validator cannot unstake. The stake is either returned following the confirmation of all RBlocks they're staked on, or lost if the staked RBlock is rejected. Losing a challenge results in the removal of the stake from all RBlocks and forfeiture of the staked funds. The minimum stake amount can increase exponentially based on the time elapsed since the deadline of the first unresolved RBlock, to discourage stalling tactics. As the chain resumes normal progress, the stake requirement decreases.
+
+This staking mechanism is designed to align the validators' financial incentives with the integrity and efficient progression of the Arbitrum chain. 
+ **Dispute Resolution**        
+## Dispute Resolution
+The dispute resolution process in Arbitrum, which utilizes interactive proving, unfolds as follows:
+
+### Step 1: Initiation of Dispute
+The claiment makes a claim about the result of the chain's computation. The other person challenges their claim, disagreeing with the result they propose. Both parties engage in a back-and-forth communication, overseen by an L1 contract, aiming to resolve their dispute.
+
+### Step 2: Dissection of Dispute
+The claiment split their original claim, which covers N execution steps, into two separate claims, each representing N/2 steps. Other party then selects one of these N/2-step claims to contest, effectively reducing the dispute's scope by half. The process of halving the dispute continues, with each iteration focusing on an increasingly smaller portion of the execution steps. This iterative process is repeated until the dispute is narrowed down to a disagreement about a single step of execution.
+
+<div align="center">
+  <img style="max-height:800px;margin-bottom:30px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_one_arbitrum_university_177/1701169120365_dispute.png"/>
+</div>
+
+### Step 3: L1 Contract's Role
+During the iterative halving process, the L1 contract does not evaluate the merits of the execution; it only ensures that the protocol's rules are followed. Only when the dispute is about a single step does the L1 contract evaluate the execution to determine the correctness of the claim.
+
+### Step 4: Resolution
+Both parties are encouraged to perform as much of the dispute resolution work off-chain as possible, minimizing the load on the L1 contract. Once the dispute is reduced to a single step, the L1 contract examines the specific instruction in question to resolve the dispute, determining whether claiment's claim is correct.
+
+## Rules to confirm or reject
+The first unresolved RBlock can be confirmed if:
+
+- The RBlock's predecessor is the latest confirmed RBlock, and
+
+- The RBlock's deadline has passed, and
+
+- There is at least one staker, and
+
+- All stakers are staked on the RBlock.
+
+The first unresolved RBlock can be rejected if:
+
+- The RBlock's predecessor has been rejected, or
+
+- All of the following are true:
+
+   The RBlock's deadline has passed, and
+
+   There is at least one staker, and
+
+   No staker is staked on the RBlock. 
+ 

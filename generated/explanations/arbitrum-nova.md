@@ -1,0 +1,69 @@
+## Header
+This is the course header. This will be added on top of every page. Go to [DoDAO.io](https://www.dodao.io) to know more.
+
+ ---
+ 
+ ## Arbitrum Nova
+ 
+ **Anytrust Security Method**        
+## The AnyTrust Security
+AnyTrust security harnesses a strategic balance between trust and decentralization, elevating the robustness of Arbitrum's rollup infrastructure. By forming a Data Availability Committee, AnyTrust fortifies data integrity and accessibility. It consists of the following components:
+
+### Data Availibility Committee
+The Data Availability Committee is a specialized group within the AnyTrust protocol framework, tasked with the crucial role of storing and ensuring the accessibility of Layer 2 transaction data for Arbitrum's rollup chain. This committee is comprised of multiple appointed members, operating under the fundamental assumption that at least two members are consistently honest and reliable. The integrity of the system hinges on this assumption, as it guarantees the availability of data, even in scenarios where other members may act maliciously or fail. 
+
+The committee's operation is governed by a set of cryptographic public keys, known as Keysets, which establish the identity and authenticity of member signatures. These Keysets are dynamically manageable via a smart contract on Ethereum's Layer 1, known as the KeysetManager, which tracks and authenticates the current valid set of committee members. This arrangement not only ensures the security and availability of transaction data but also introduces a mechanism for manageable trust, reducing the dependency on Ethereum's mainnet and leading to a more efficient and cost-effective rollup process.
+
+<div align="center">
+  <img style="max-height:800px;margin-bottom:50px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nova_arbitrum_university_144/1701175505035_anytrust_sakoorti.png"/>
+</div>
+
+### Data Availibility Certificates
+The Data Availability Certificate (DACert) is an essential component of the AnyTrust protocol, ensuring data accessibility in the Arbitrum network. A DACert includes a data block's hash, an expiration time, and cryptographic evidence that N-1 Committee members have endorsed it. This evidence comprises the Keyset's hash used for signing, a bitmap of the signatories, and a collective BLS signature. Under AnyTrust’s trust model, a valid DACert guarantees that the data will be available from at least one trustworthy Committee member until the expiration time. 
+
+In contrast to the standard Nitro practice where sequencers post full data on Ethereum's Layer 1, AnyTrust permits posting a DACert as a more gas-efficient alternative. The Layer 1 inbox contract validates the Keyset, while Layer 2 code performs additional checks on the signature and expiration time to ensure the DACert's validity. If the DACert passes these checks, the associated data block is considered available, thereby optimizing the data posting process by reducing the on-chain footprint and maintaining data availability.
+
+### Data Availibility Server 
+Committee members in the AnyTrust protocol operate Data Availability Servers (DAS), which provide crucial infrastructure for data storage and retrieval. The DAS implements two distinct application programming interfaces (APIs):
+
+1. **Sequencer API:** This is a JSON-RPC interface exclusive to the Arbitrum chain's Sequencer, through which the Sequencer submits data blocks to be stored by the DAS. Access to this API is typically restricted to the Sequencer to prevent unauthorized submissions.
+
+2. **REST API:** Available publicly, this HTTP(S)-based RESTful API allows any participant to fetch data blocks using their hash. It is designed to be fully cacheable, and deployments often employ caching proxies or content delivery networks (CDNs) to enhance scalability and mitigate the risk of denial-of-service (DoS) attacks.
+
+While the Sequencer API is essential only for Committee members, the REST API's functionality is often supported by other entities as well, contributing positively to the system's robustness. The DAS software itself is versatile, with configuration options that allow data to be stored in various ways—locally on file systems, within a Badger database across multiple backing stores for redundancy. Furthermore, the DAS includes features for enhanced performance and reliability, such as optional in-memory caching utilizing Bigcache or external caching with a Redis instance, catering to the diverse needs of data storage and access in the AnyTrust ecosystem. This multi-faceted approach ensures that data is not only stored securely but is also readily available for validation and use by the network, thus maintaining the continuity and efficiency of the Arbitrum protocol. 
+ **Working of Anytrust**        
+## Sequencer-Committee Interaction
+Here's the step-by-step process detailing the interaction between the Arbitrum sequencer and the Data Availability Committee during block validation in the Arbitrum AnyTrust protocol:
+
+### Step 1:Batch Creation
+The Arbitrum sequencer generates a data batch for submission and sets an expiration time, typically three weeks ahead. The sequencer sends this batch data along with the expiration time to all Committee members simultaneously via an RPC (Remote Procedure Call) interface.
+
+### Step 2: Data Storage by Committee Members
+Each Committee member receives the batch and stores the data in its own backing store, using the data’s hash as an index for future retrieval. Committee members then sign the pair consisting of the data’s hash and the expiration time using their individual BLS cryptographic keys.
+
+<div align="center">
+  <img style="max-height:700px;margin-bottom:50px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/arbitrum_nova_arbitrum_university_144/1701175567955_kaam_of%20anytrust.png"/>
+</div>
+
+### Step 3: DACert Creation
+The Committee members send their signatures back to the sequencer. Each returns a signature accompanied by an indicator of successful storage. Once the sequencer receives the required number of signatures, it aggregates them to form a Data Availability Certificate (DACert) for the data batch.
+
+### Step 4: DACert Posting
+The sequencer posts this DACert to the Layer 1 (L1) inbox contract. The DACert is now available for the AnyTrust Layer 2 (L2) chain software, which can validate the data's availability based on it. If the sequencer cannot obtain the necessary signatures within a specified time frame, it defaults to the traditional rollup method. It then posts the full data directly to the L1 chain, bypassing the Committee. The L2 software is designed to recognize both data formats—either provided through a DACert or posted in full. It processes the data accordingly to continue the chain’s operation seamlessly.
+
+This process ensures that the AnyTrust protocol can validate blocks efficiently while offering a contingency plan to maintain the chain's integrity and continuity. 
+ **Difference between Anytrust and Rollup**        
+## Differences between Arbitrum Nova (AnyTrust) and Arbitrum One (Rollup)
+Arbitrum One and Arbitrum nova are based on different block authentication mechanisms which results in different use face, operations and cost. Some of the major differences between two chains are listed in the table below.
+
+
+| Feature               | Arbitrum One (Rollup)                                                        | Arbitrum Nova (AnyTrust)                                               |
+|-----------------------|------------------------------------------------------------------------------|------------------------------------------------------------------------|
+| **Data Authenticity** | Layer 2 transaction data is posted on the Ethereum blockchain.               | Uses AnyTrust technology with a Data Availability Committee (DAC).     |
+| **Trust Assumption**  | Trustless and permissionless, open for anyone to validate.                   | Relies on at least two honest DAC members to operate securely.         |
+| **Gas Price**         | Minimum gas price is 0.1 gwei.                                               | Minimum gas price is 0.01 gwei, potentially 10x cheaper.               |
+| **Scalability**       | Suitable for general use cases.                                              | More scalable, designed for high-load dApps like NFTs and social networks. |
+| **DeFi Protocols**    | Higher TVL with major DeFi protocols like Uniswap, Aave, and Curve.          | Lower TVL with a focus on gaming and social, includes Sushi and others.   |
+| **Transaction Costs** | Relatively higher due to full data posting on Ethereum.                      | Lower costs due to only posting certificates on Layer 1.               |
+ 
+ 

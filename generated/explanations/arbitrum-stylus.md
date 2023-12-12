@@ -1,0 +1,27 @@
+## Header
+This is the course header. This will be added on top of every page. Go to [DoDAO.io](https://www.dodao.io) to know more.
+
+ ---
+ 
+ ## Arbitrum Stylus
+ 
+ **How does it work?**        
+## Working of Stylus 
+Here's a step-by-step process explaining how Stylus works:
+
+### Step 1: Coding
+Developers write smart contracts in languages like Rust, C, or C++. These languages are chosen because they can be compiled into efficient WebAssembly (WASM) code. Rust is the most supported on launch, with a dedicated SDK to simplify smart contract development. Developers can use familiar EVM functionalities within the Rust environment.
+
+### Step 2: Compilation
+The written program is first compiled into WASM using appropriate tools like the Stylus SDK for Rust or compilers like Clang for C/C++. After compilation, the WASM code is uploaded to the blockchain, but it’s not yet executable. A special process called "activation" is then required. This involves using the ArbWasm precompile to convert WASM into binary code that’s optimized for the node’s architecture, ensuring the program is safe and efficient for execution.
+
+<div align="center">
+  <img style="max-height:500px;margin-bottom:40px" src="https://d31h13bdjwgzxs.cloudfront.net/academy/arbitrum-university/Guide/introduction_to_stylus_arbitrum_university_536/1701189449845_working_of%20stylus.png"/>
+</div>
+
+### Step 3: Execution
+Stylus programs run on a modified version of Wasmer, a leading WebAssembly runtime, which is optimized for blockchain applications. This allows Stylus programs to execute much faster than traditional EVM bytecode. Despite the introduction of Stylus, existing EVM contracts operate as usual. Both Solidity and WASM contracts are fully interoperable, allowing cross-contract calls without language barriers.
+
+### Step 4: Proving
+In normal operations (the "happy case"), Nitro compiles execution history to native code to ensure efficiency. If a dispute arises (the "sad case"), Nitro uses WASM to perform interactive fraud proofs on Ethereum. Stylus extends Nitro's fraud-proofing capability by enabling it to work with any WASM program deployed by developers, maintaining the integrity and trustworthiness of the blockchain.  
+ 
