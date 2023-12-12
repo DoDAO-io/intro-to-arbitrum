@@ -1122,6 +1122,36 @@
               "key": "f4708987"
             }
           ]
+        },
+        {
+          "uuid": "80f36f32-e0cb-41dc-9fd1-cf5e07286b2c",
+          "type": "MultipleChoice",
+          "content": "What is the purpose of Orbit's flexible governance model?",
+          "hint": "",
+          "explanation": "Orbit's flexible governance model allows chain creators to independently determine governance mechanisms, tailored to suit their specific project needs.",
+          "answerKeys": [
+            "A"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "To allow Orbit chain creators to establish their own governance mechanisms ",
+              "key": "A"
+            },
+            {
+              "content": "To centralize control over all Orbit chains",
+              "key": "61109d76"
+            },
+            {
+              "content": "To implement Ethereum's governance model",
+              "key": "c0e38e4f"
+            },
+            {
+              "content": "To enforce a standard governance structure across all Orbit chains",
+              "key": "a1a8332c"
+            }
+          ]
         }
       ],
       "readings": [],
