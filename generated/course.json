@@ -1324,9 +1324,9 @@
         {
           "uuid": "cbba941f-38b6-4ba7-8087-45d764cd6128",
           "type": "SingleChoice",
-          "content": "What is one of the key advantages of Stylus?",
+          "content": "How does Stylus contribute to the EVM+ paradigm?",
           "hint": "NoHint",
-          "explanation": "One of the key advantages of Stylus is its multi-language support. It broadens access to Arbitrum's blockchain development by accommodating a variety of programming languages.",
+          "explanation": "Stylus contributes to the EVM+ paradigm by maintaining full interoperability with existing Solidity contracts while improving efficiency and broadening the set of available programming languages.",
           "answerKeys": [
             "B"
           ],
@@ -1334,19 +1334,19 @@
           "difficultyLevel": "Medium",
           "choices": [
             {
-              "content": "It only supports the Solidity language",
+              "content": "By limiting smart contract development to Rust only",
               "key": "A"
             },
             {
-              "content": "It supports multiple programming languages",
+              "content": "By maintaining full interoperability with existing Solidity contracts",
               "key": "B"
             },
             {
-              "content": "It only supports the C++ language",
+              "content": "By increasing gas costs for transactions",
               "key": "C"
             },
             {
-              "content": "It only supports the Rust language",
+              "content": "By replacing the EVM entirely",
               "key": "D"
             }
           ]
