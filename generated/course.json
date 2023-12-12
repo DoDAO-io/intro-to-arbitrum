@@ -50,36 +50,6 @@
       ],
       "questions": [
         {
-          "uuid": "d4d2a73b-34a8-4afc-8645-aea873a9bb65",
-          "type": "SingleChoice",
-          "content": "What is the primary purpose of Layer 2 solutions?",
-          "hint": "NoHint",
-          "explanation": "The primary purpose of Layer 2 solutions is to address the scalability and performance issues of the main blockchain by handling transactions off the main chain.",
-          "answerKeys": [
-            "B"
-          ],
-          "subTopics": [],
-          "difficultyLevel": "Medium",
-          "choices": [
-            {
-              "content": "To create a new blockchain system",
-              "key": "A"
-            },
-            {
-              "content": "To address scalability and performance issues of the main blockchain",
-              "key": "B"
-            },
-            {
-              "content": "To replace the main blockchain",
-              "key": "C"
-            },
-            {
-              "content": "To increase transaction costs",
-              "key": "D"
-            }
-          ]
-        },
-        {
           "uuid": "31d51ba4-1d36-4d6e-85c3-885d00027a30",
           "type": "SingleChoice",
           "content": "What are the benefits of Layer 2?",
