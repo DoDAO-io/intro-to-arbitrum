@@ -942,6 +942,36 @@
               "key": "66db73bc"
             }
           ]
+        },
+        {
+          "uuid": "7ea24731-ddd1-493e-917e-89265deb6ede",
+          "type": "MultipleChoice",
+          "content": "How does the Sequencer-Committee interaction work in the Arbitrum AnyTrust protocol?",
+          "hint": "",
+          "explanation": "In the Arbitrum AnyTrust protocol, the Sequencer generates data batches and sends them to the Committee for storage and certification.",
+          "answerKeys": [
+            "e8b76dcb"
+          ],
+          "subTopics": [],
+          "difficultyLevel": "Medium",
+          "choices": [
+            {
+              "content": "The Committee creates new cryptocurrencies ",
+              "key": "A"
+            },
+            {
+              "content": "The Sequencer posts data batches directly to Ethereum's Layer 1",
+              "key": "df051385"
+            },
+            {
+              "content": "The Sequencer generates and sends data batches to the Committee for storage and certification",
+              "key": "e8b76dcb"
+            },
+            {
+              "content": "The Committee operates independently of the Sequencer",
+              "key": "5bb5ef64"
+            }
+          ]
         }
       ],
       "readings": [],
