@@ -111,6 +111,7 @@ topics:
       underlying main chain.
 
     explanations: introduction.yaml
+    questions: introduction.yaml
   - key: arbitrum-nitro
     title: Arbitrum Nitro
     details: >-
@@ -250,6 +251,7 @@ topics:
       enabling the confirmation of transactions and the processing of
       withdrawals back to Layer 1.
     explanations: arbitrum-one.yaml
+    questions: arbitrum-one.yaml
   - key: arbitrum-nova
     title: Arbitrum Nova
     details: >-
@@ -313,6 +315,7 @@ topics:
       membership and keys. This ensures data availability and supports a
       trust-minimized, efficient blockchain ecosystem.
     explanations: arbitrum-nova.yaml
+    questions: arbitrum-nova.yaml
   - key: arbitrum-orbit
     title: Arbitrum Orbit
     details: >-

@@ -1,0 +1,72 @@
+- uuid: 134ae2b8-f6b6-4ec9-a63c-aa567b9e1afa
+  type: SingleChoice
+  content: What is Arbitrum Nova?
+  hint: NoHint
+  explanation: >-
+    Arbitrum Nova is a variant within the Arbitrum ecosystem that provides a
+    high-performance blockchain solution. It operates on the AnyTrust protocol,
+    which introduces a new element of trust through the Data Availability
+    Committee (DAC).
+  answerKeys:
+    - C
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: A high-performance car model
+      key: A
+    - content: A new software update for Arbitrum
+      key: B
+    - content: >-
+        A variant within the Arbitrum ecosystem that provides a high-performance
+        blockchain solution
+      key: C
+    - content: A new cryptocurrency
+      key: D
+- uuid: 47de4b73-0e7d-4915-b188-185a03d1a2ac
+  type: SingleChoice
+  content: >-
+    What is the role of the Data Availability Committee (DAC) in the AnyTrust
+    protocol?
+  hint: NoHint
+  explanation: >-
+    The DAC has the task of efficiently handling Layer 2 transaction
+    data—storing it, batching it, and then posting it to Ethereum's Layer 1.
+    This allows Arbitrum Nova to offer enhanced performance and
+    cost-effectiveness.
+  answerKeys:
+    - B
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: To manage the distribution of cryptocurrencies
+      key: A
+    - content: >-
+        To handle Layer 2 transaction data—storing it, batching it, and then
+        posting it to Ethereum's Layer 1
+      key: B
+    - content: To oversee the creation of new cryptocurrencies
+      key: C
+    - content: To regulate the use of the AnyTrust protocol
+      key: D
+- uuid: 783ac64d-7d05-4917-b9a0-4a9b6715a14d
+  type: SingleChoice
+  content: What is the main benefit of the AnyTrust protocol?
+  hint: NoHint
+  explanation: >-
+    The AnyTrust protocol reduces costs on the Arbitrum system by entrusting a
+    Committee with data storage and distribution, thus minimizing the data
+    posted to Ethereum's mainnet. It also ensures data integrity while lessening
+    the gas fees typically incurred for data posting.
+  answerKeys:
+    - D
+  subTopics: []
+  difficultyLevel: Medium
+  choices:
+    - content: It increases the speed of transactions
+      key: A
+    - content: It allows for the creation of new cryptocurrencies
+      key: B
+    - content: It increases the security of the Arbitrum system
+      key: C
+    - content: It reduces costs and ensures data integrity on the Arbitrum system
+      key: D
